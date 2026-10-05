@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HotGlobe — горящие туры по всему миру</title>
+<meta name="description" content="Горящие туры со скидкой до 50 % из городов России, Казахстана, Беларуси, Узбекистана, Армении и Кыргызстана. Проверяем перелёт, отель и сервис — индекс выгоды для каждого тура.">
+<meta name="theme-color" content="#0EA5E9">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://hotglobe.example/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HotGlobe — горящие туры по всему миру">
+<meta property="og:description" content="Путёвки со скидкой до 50 % с проверкой перелёта, отеля и сервиса.">
+<meta property="og:image" content="https://hotglobe.example/assets/img/og-globe-1200x630.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Unbounded:wght@700;800&family=Noto+Color+Emoji&display=swap&subset=cyrillic" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='18' cy='22' r='15' fill='%230EA5E9'/%3E%3Cpath d='M31 2c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 1 2 2 2 3 1-1-2-1-4 0-6z' fill='%23FF6B4A'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"HotGlobe","url":"https://hotglobe.example/","description":"Агрегатор горящих туров. Не является туроператором."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Почему туры такие дешёвые?","acceptedAnswer":{"@type":"Answer","text":"Туроператоры снижают цены на места, которые нужно продать за 1–14 дней до вылета: оплаченные блоки в самолётах и отелях выгоднее продать со скидкой, чем оставить пустыми."}},
+{"@type":"Question","name":"Где я оплачиваю тур?","acceptedAnswer":{"@type":"Answer","text":"На сайте партнёра — туроператора или агрегатора. HotGlobe не принимает оплату и не является туроператором."}},
+{"@type":"Question","name":"Насколько актуальны цены?","acceptedAnswer":{"@type":"Answer","text":"Предложения обновляются каждые 15 минут, авиацены — раз в час. Перед переходом мы дополнительно проверяем цену."}},
+{"@type":"Question","name":"Что такое индекс выгоды?","acceptedAnswer":{"@type":"Answer","text":"Оценка от 0 до 100: 35 % — размер скидки, 20 % — цена за ночь относительно медианы направления, 20 % — логистика, 25 % — сервис отеля."}},
+{"@type":"Question","name":"Можно ли вернуть горящий тур?","acceptedAnswer":{"@type":"Answer","text":"Условия возврата определяет туроператор. Внимательно изучите их на сайте партнёра перед оплатой; рекомендуем оформить страховку от невыезда."}},
+{"@type":"Question","name":"Нужна ли виза?","acceptedAnswer":{"@type":"Answer","text":"Визовые требования зависят от вашего гражданства. Уточните их на официальном сайте консульства страны назначения."}},
+{"@type":"Question","name":"Как выбрать город вылета?","acceptedAnswer":{"@type":"Answer","text":"Выберите город в шапке сайта или в блоке «Города вылета». Мы показываем цены и маршруты именно из него."}}
+]}
+</script>
+
+<style>
+:root{
+  --color-ocean:#0EA5E9; --color-ocean-deep:#0B3C5D; --color-lagoon:#14D9C4; --color-sky:#E0F4FF;
+  --color-coral:#FF6B4A; --color-coral-dark:#E2492A; --color-sun:#FFC93C; --color-palm:#22C55E;
+  --color-white:#FFFFFF; --color-text:#1E293B; --color-muted:#64748B; --color-border:#E2E8F0;
+  --gradient-hero:linear-gradient(180deg,#7DD3FC 0%,#0EA5E9 45%,#14D9C4 100%);
+  --gradient-cta:linear-gradient(135deg,#FF6B4A 0%,#FF9A3C 100%);
+  --shadow:0 10px 30px rgba(14,165,233,.15); --shadow-lg:0 20px 50px rgba(11,60,93,.18);
+  --r-card:20px; --r-btn:14px; --hdr:72px;
+  --f-head:'Montserrat','Noto Color Emoji',system-ui,sans-serif; --f-display:'Unbounded','Montserrat','Noto Color Emoji',system-ui,sans-serif; --f-body:'Inter','Noto Color Emoji',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 16px/1.55 var(--f-body);color:var(--color-text);background:var(--color-white);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--f-head);color:var(--color-ocean-deep);margin:0;line-height:1.15}
+h2{font-size:40px;font-weight:700}
+h3{font-size:22px;font-weight:600}
+:focus-visible{outline:3px solid var(--color-sun);outline-offset:2px;border-radius:6px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+section[id]{scroll-margin-top:calc(var(--hdr) + 8px)}
+.sec{padding:96px 0;position:relative}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 40px}
+.sec-head p{color:var(--color-muted);margin:12px 0 0;font-size:17px}
+.eyebrow{display:inline-block;font:600 13px/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--color-ocean);margin-bottom:10px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:var(--r-btn);padding:14px 22px;font:700 15px/1.1 var(--f-head);text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn-cta{background:var(--gradient-cta);color:#fff;box-shadow:0 8px 22px rgba(255,107,74,.35)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,107,74,.45)}
+.btn-ghost{background:rgba(255,255,255,.18);color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn-ghost:hover{background:rgba(255,255,255,.3)}
+.btn-outline{background:#fff;color:var(--color-ocean-deep);border:1.5px solid var(--color-ocean)}
+.btn-outline:hover{background:var(--color-sky)}
+.btn.wide{width:100%}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1.5px solid #9BD8F6;background:#fff;color:var(--color-ocean-deep);font:500 14px/1.2 var(--f-body);cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.chip:hover{border-color:var(--color-ocean)}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip.on,.chip:has(input:checked){background:var(--color-ocean);border-color:var(--color-ocean);color:#fff}
+.chip:has(input:focus-visible){outline:3px solid var(--color-sun);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+
+/* Header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;height:var(--hdr);transition:background .3s,box-shadow .3s;color:#fff}
+.hdr.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(11,60,93,.08);color:var(--color-ocean-deep)}
+.hdr-in{height:100%;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;font:800 22px/1 var(--f-head);letter-spacing:-.02em;flex-shrink:0}
+.logo b{color:var(--color-coral)}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{text-decoration:none;font:600 15px/1 var(--f-head);opacity:.92;padding:8px 0;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--color-coral);transform:scaleX(0);transition:transform .25s}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-tools{display:flex;align-items:center;gap:10px}
+.sel{position:relative;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.5);border-radius:12px;padding:0 10px;height:42px}
+.hdr.scrolled .sel{background:#fff;border-color:var(--color-border)}
+.sel select{appearance:none;-webkit-appearance:none;border:0;background:transparent;font:600 14px/1 var(--f-head);padding-right:16px;cursor:pointer;max-width:170px;color:inherit}
+.sel select option,.sel select optgroup{color:var(--color-text)}
+.sel::after{content:"";position:absolute;right:10px;top:50%;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.burger{display:none;width:42px;height:42px;border-radius:12px;border:1.5px solid rgba(255,255,255,.5);background:rgba(255,255,255,.2);cursor:pointer;position:relative}
+.hdr.scrolled .burger{border-color:var(--color-border);background:#fff}
+.burger span,.burger span::before,.burger span::after{position:absolute;left:11px;right:11px;height:2px;background:currentColor;border-radius:2px;content:"";transition:transform .25s}
+.burger span{top:50%;transform:translateY(-50%)}
+.burger span::before{left:0;right:0;top:-6px}
+.burger span::after{left:0;right:0;top:6px}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:var(--gradient-hero);color:#fff;padding:calc(var(--hdr) + 24px) 0 120px;overflow:hidden}
+.hero-sea{position:absolute;left:0;right:0;bottom:0;height:45%;background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60") center 70%/cover;filter:blur(6px) saturate(1.1);opacity:.45;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 60%);mask-image:linear-gradient(to bottom,transparent,#000 60%);transform:scale(1.05)}
+.hero::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(255,229,150,.75),rgba(255,201,60,0) 65%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;align-items:center;gap:24px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:7px 14px;font:600 13px/1 var(--f-body);backdrop-filter:blur(6px)}
+.hero h1{font:800 56px/1.08 var(--f-display);color:#fff;margin:18px 0 18px;letter-spacing:-.02em;text-shadow:0 4px 30px rgba(11,60,93,.25)}
+.hero h1 em{font-style:normal;color:var(--color-sun)}
+.lead{font-size:19px;max-width:520px;margin:0 0 28px;opacity:.96}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-stats{list-style:none;display:flex;gap:28px;padding:0;margin:34px 0 0}
+.hero-stats b{display:block;font:800 28px/1 var(--f-head)}
+.hero-stats span{font-size:13px;opacity:.9}
+.globe-wrap{position:relative;width:min(100%,600px);aspect-ratio:1/1;margin:0 auto;touch-action:pan-y}
+.globe-canvas{position:absolute;inset:0;opacity:0;transition:opacity .8s}
+.globe-canvas canvas{width:100%!important;height:100%!important;display:block;cursor:grab}
+.globe-canvas canvas:active{cursor:grabbing}
+.globe-wrap.ready .globe-canvas{opacity:1}
+.globe-wrap.ready .globe-static{opacity:0}
+.globe-static{position:absolute;inset:0;transition:opacity .8s;pointer-events:none}
+.gs-earth{position:absolute;inset:17%;border-radius:50%;
+  background:
+   radial-gradient(circle at 33% 28%,rgba(255,255,255,.6),rgba(255,255,255,0) 32%),
+   radial-gradient(ellipse 18% 13% at 58% 34%,#5fbf6a 0 70%,transparent 72%),
+   radial-gradient(ellipse 14% 20% at 44% 58%,#7cc56b 0 70%,transparent 72%),
+   radial-gradient(ellipse 22% 10% at 70% 55%,#d9c38b 0 70%,transparent 72%),
+   radial-gradient(ellipse 10% 14% at 26% 44%,#5fbf6a 0 70%,transparent 72%),
+   radial-gradient(circle at 50% 50%,#38bdf8 0,#0284c7 55%,#0b3c5d 100%);
+  box-shadow:0 0 0 10px rgba(186,230,253,.25),0 0 80px 10px rgba(186,230,253,.75),inset -40px -30px 70px rgba(3,30,60,.5)}
+.gs-orbit{position:absolute;inset:6%;border-radius:50%;border:2px dashed rgba(255,255,255,.4);animation:orbit 16s linear infinite}
+.gs-plane{position:absolute;left:50%;top:-18px;font-size:32px;transform:translateX(-50%) rotate(45deg);filter:drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.globe-tip{position:absolute;z-index:3;pointer-events:none;background:#fff;color:var(--color-ocean-deep);font:600 14px/1.2 var(--f-head);padding:8px 12px;border-radius:12px;box-shadow:var(--shadow-lg);transform:translate(-50%,calc(-100% - 14px));white-space:nowrap}
+.globe-hint{position:absolute;left:0;right:0;bottom:2%;text-align:center;font-size:13px;opacity:.85;margin:0}
+.globe-list{position:absolute;left:0;top:0}
+
+.search{position:relative;z-index:2;margin-top:28px;background:#fff;color:var(--color-text);border-radius:22px;box-shadow:var(--shadow-lg);padding:14px;display:grid;grid-template-columns:1.2fr 1.2fr 1fr .9fr 1.1fr auto;gap:8px}
+.s-field{display:flex;flex-direction:column;gap:2px;padding:8px 12px;border-radius:14px;background:#F4FAFE;border:1.5px solid transparent;transition:border-color .2s;min-width:0}
+.s-field:focus-within{border-color:var(--color-ocean)}
+.s-field label{font:600 12px/1.2 var(--f-body);color:var(--color-muted);text-transform:uppercase;letter-spacing:.04em}
+.s-field select,.s-field input{border:0;background:transparent;font:600 15px/1.3 var(--f-head);color:var(--color-ocean-deep);padding:2px 0;width:100%;min-width:0;outline:none}
+.search .btn{padding:0 28px;min-height:58px}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:70px;display:block}
+
+/* Offers */
+.offers-sec{background:linear-gradient(180deg,#fff 0%,var(--color-sky) 100%)}
+.offers-layout{display:grid;grid-template-columns:290px 1fr;gap:28px;align-items:start}
+.filters{position:sticky;top:calc(var(--hdr) + 16px);max-height:calc(100vh - var(--hdr) - 32px);overflow:auto;background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow);padding:22px;scrollbar-width:thin}
+.f-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.f-head h3{font-size:20px}
+.f-close{display:none;border:0;background:var(--color-sky);width:38px;height:38px;border-radius:12px;cursor:pointer;font-size:16px}
+.f-group{padding:14px 0;border-bottom:1px solid var(--color-border)}
+.f-group:last-of-type{border-bottom:0}
+.f-group>label,.f-lbl{display:block;font:600 13px/1.3 var(--f-body);color:var(--color-muted);margin-bottom:8px}
+.f-group select,.f-group input[type=date],.f-group input[type=number]{width:100%;height:42px;border:1.5px solid var(--color-border);border-radius:12px;padding:0 10px;background:#fff;font-size:14px}
+.f-group select:focus,.f-group input:focus{border-color:var(--color-ocean);outline:none}
+.f-row{display:flex;align-items:center;gap:8px}
+.f-row>*{flex:1;min-width:0}
+.f-row>span{flex:0 0 auto;color:var(--color-muted)}
+.counter{display:flex;align-items:center;gap:10px;margin:6px 0}
+.counter span{flex:1;font-size:14px}
+.counter button{width:34px;height:34px;border-radius:10px;border:1.5px solid var(--color-border);background:#fff;cursor:pointer;font-size:18px;line-height:1}
+.counter button:hover{border-color:var(--color-ocean)}
+.counter output{min-width:20px;text-align:center;font:700 16px/1 var(--f-head)}
+input[type=range]{width:100%;accent-color:var(--color-ocean)}
+.toggle{display:flex;align-items:center;gap:10px;padding:10px 0;cursor:pointer;font-size:14px}
+.toggle input{position:absolute;opacity:0}
+.toggle span{width:42px;height:24px;border-radius:999px;background:#CBD5E1;position:relative;transition:background .2s;flex-shrink:0}
+.toggle span::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle input:checked+span{background:var(--color-ocean)}
+.toggle input:checked+span::after{transform:translateX(18px)}
+.toggle input:focus-visible+span{outline:3px solid var(--color-sun);outline-offset:2px}
+.sheet-apply{display:none;margin-top:10px}
+#reset{margin-top:12px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.toolbar p{margin:0;color:var(--color-muted);flex:1}
+.toolbar p b{color:var(--color-ocean-deep)}
+.toolbar label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--color-muted)}
+.toolbar select{height:40px;border:1.5px solid var(--color-border);border-radius:12px;padding:0 10px;background:#fff;font:600 14px/1 var(--f-head);color:var(--color-ocean-deep)}
+.btn-filters{display:none;height:40px;border-radius:12px;border:1.5px solid var(--color-ocean);background:#fff;font:700 14px/1 var(--f-head);color:var(--color-ocean-deep);padding:0 16px;cursor:pointer}
+.notice{background:#FFF7E6;border:1px solid #FFE1A3;color:#7A5200;padding:10px 14px;border-radius:12px;font-size:14px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.ph{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,hsl(var(--h,200) 80% 70%),hsl(calc(var(--h,200) + 40) 75% 50%));overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.05)}
+.ph-emoji{position:absolute;inset:0;display:grid;place-items:center;font-size:54px;opacity:.55}
+.ph img+.ph-emoji{display:none}
+.disc{position:absolute;top:12px;right:12px;background:var(--color-coral);color:#fff;font:800 15px/1 var(--f-head);padding:8px 10px;border-radius:12px;box-shadow:0 6px 16px rgba(255,107,74,.4)}
+.badges{position:absolute;left:12px;top:12px;right:80px;display:flex;flex-wrap:wrap;gap:6px}
+.badge{background:rgba(255,255,255,.94);color:var(--color-ocean-deep);font:600 12px/1 var(--f-body);padding:6px 9px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.badge.soon{background:var(--color-sun)}
+.cb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.loc{font-size:13px;color:var(--color-muted);font-weight:500}
+.hn{font:700 18px/1.25 var(--f-head);color:var(--color-ocean-deep)}
+.stars{color:var(--color-sun);font-size:14px;letter-spacing:1px;white-space:nowrap}
+.rating{font-size:14px;color:var(--color-muted)}
+.rating b{display:inline-block;background:var(--color-ocean);color:#fff;border-radius:8px;padding:2px 7px;font:700 13px/1.3 var(--f-head)}
+.feat{list-style:none;margin:2px 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.feat li{font-size:12.5px;background:#F1F8FD;border-radius:8px;padding:4px 8px;color:#334155}
+.when{font-size:13px;color:#334155}
+.vidx{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--color-muted);margin-top:4px}
+.vidx .bar{flex:1;height:8px;border-radius:999px;background:#EEF2F6;overflow:hidden}
+.vidx .bar i{display:block;height:100%;border-radius:inherit;background:#94A3B8}
+.vidx b{font:800 15px/1 var(--f-head);color:#64748B;min-width:24px;text-align:right}
+.vidx.g .bar i{background:linear-gradient(90deg,#4ADE80,var(--color-palm))}.vidx.g b{color:#15803D}
+.vidx.y .bar i{background:linear-gradient(90deg,#FDE68A,var(--color-sun))}.vidx.y b{color:#A16207}
+.vsub{font-size:12px;color:var(--color-muted)}
+.price{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px}
+.price s{color:var(--color-muted);font-size:14px}
+.price strong{font:800 28px/1.1 var(--f-head);color:var(--color-ocean-deep)}
+.price small{flex-basis:100%;font-size:12.5px;color:var(--color-muted)}
+.src{font-size:11.5px;color:#94A3B8;margin:0;text-align:center}
+.more-wrap{text-align:center;margin-top:28px}
+.demo-note{font-size:12.5px;color:var(--color-muted);text-align:center;margin:18px 0 0}
+.skel{background:#fff;border-radius:var(--r-card);overflow:hidden;box-shadow:var(--shadow)}
+.skel .s-ph{aspect-ratio:4/3}
+.skel .s-l{height:14px;margin:14px 18px;border-radius:8px}
+.skel .s-l.w60{width:60%}.skel .s-l.w40{width:40%;height:26px}
+.shimmer{background:linear-gradient(90deg,#EDF4FA 25%,#F8FBFE 50%,#EDF4FA 75%);background-size:200% 100%;animation:sh 1.2s infinite linear}
+@keyframes sh{to{background-position:-200% 0}}
+.state{grid-column:1/-1;text-align:center;background:#fff;border-radius:var(--r-card);padding:48px 24px;box-shadow:var(--shadow)}
+.state .ill{font-size:60px;line-height:1}
+.state h3{margin:14px 0 8px}
+.state p{color:var(--color-muted);max-width:520px;margin:0 auto 18px}
+.state .chips{justify-content:center}
+
+/* Countries */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.tab{border:1.5px solid #9BD8F6;background:#fff;border-radius:999px;padding:10px 18px;font:600 15px/1 var(--f-head);color:var(--color-ocean-deep);cursor:pointer;transition:all .2s}
+.tab[aria-selected=true]{background:var(--color-ocean);border-color:var(--color-ocean);color:#fff;box-shadow:0 6px 18px rgba(14,165,233,.35)}
+.c-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.c-card{position:relative;border:0;padding:0;text-align:left;border-radius:var(--r-card);overflow:hidden;min-height:280px;cursor:pointer;color:#fff;background:linear-gradient(160deg,hsl(var(--h) 80% 62%),hsl(calc(var(--h) + 35) 70% 38%));box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;display:flex}
+.c-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.c-card[aria-expanded=true]{outline:3px solid var(--color-coral);outline-offset:3px}
+.c-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.c-card:hover img{transform:scale(1.06)}
+.c-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,60,93,0) 30%,rgba(11,60,93,.85) 100%)}
+.c-in{position:relative;z-index:1;margin-top:auto;padding:18px;width:100%}
+.c-in h3{color:#fff;font-size:22px;display:flex;align-items:center;gap:8px}
+.c-price{font:800 20px/1.2 var(--f-head);color:var(--color-sun);margin:4px 0 8px}
+.c-meta{display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px}
+.c-meta span{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);border-radius:999px;padding:4px 9px}
+.c-count{position:absolute;top:14px;left:14px;z-index:1;background:var(--color-coral);font:700 12px/1 var(--f-body);padding:6px 10px;border-radius:999px}
+.c-panel{grid-column:1/-1;background:#fff;border-radius:var(--r-card);box-shadow:var(--shadow-lg);padding:26px;border:1.5px solid #CDEBFB;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(-8px)}}
+.c-panel-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.c-panel-head p{margin:4px 0 0;color:var(--color-muted);font-size:14px}
+.c-panel-cols{display:grid;grid-template-columns:1fr 1.5fr;gap:28px}
+.c-panel h4{font:700 15px/1.2 var(--f-head);color:var(--color-ocean-deep);margin:0 0 12px}
+.mini{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--color-border)}
+.mini:last-child{border-bottom:0}
+.mini-i{flex:1;min-width:0}
+.mini-i b{display:block;font:700 15px/1.3 var(--f-head);color:var(--color-ocean-deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-i span{font-size:13px;color:var(--color-muted)}
+.mini-p{text-align:right;font:800 17px/1.2 var(--f-head);color:var(--color-ocean-deep);white-space:nowrap}
+.mini-p small{display:block;font:600 12px/1 var(--f-body);color:var(--color-coral)}
+.mini .btn{padding:10px 14px;font-size:13px}
+.visa-note{font-size:12.5px;color:var(--color-muted);margin:14px 0 0}
+
+/* Departures */
+.dep-sec{background:var(--color-sky)}
+.d-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:1000px;margin:0 auto}
+.d-chips .chip{padding:12px 18px;font-size:15px}
+.d-chips .chip b{font-family:var(--f-head);color:var(--color-coral)}
+.d-chips .chip.on b{color:#fff}
+
+/* How */
+.how-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.how-card{background:#fff;border-radius:var(--r-card);padding:28px;box-shadow:var(--shadow);border:1px solid #EAF6FD}
+.how-ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;color:#fff}
+.how-card p{color:var(--color-muted);margin:10px 0 0}
+.formula{margin-top:36px;background:linear-gradient(135deg,#0B3C5D,#0E6A94);color:#fff;border-radius:24px;padding:30px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;box-shadow:var(--shadow-lg)}
+.formula h3{color:#fff}
+.fbar{display:flex;height:54px;border-radius:14px;overflow:hidden;margin:18px 0 12px}
+.fbar button{border:0;cursor:pointer;color:#0B3C5D;font:800 15px/1 var(--f-head);transition:filter .2s,flex-grow .4s;display:flex;align-items:center;justify-content:center;min-width:0}
+.fbar button:hover,.fbar button[aria-pressed=true]{filter:brightness(1.12) saturate(1.2)}
+.fbar button[aria-pressed=true]{box-shadow:inset 0 -4px 0 rgba(11,60,93,.4)}
+.flegend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;opacity:.9}
+.flegend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:0}
+.fdesc{min-height:48px;font-size:15px;opacity:.95;margin:14px 0 0}
+.calc{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:20px}
+.calc h4{margin:0 0 4px;font:700 15px/1.3 var(--f-head)}
+.calc .hint{font-size:12.5px;opacity:.75;margin:0 0 12px}
+.calc table{width:100%;border-collapse:collapse;font-size:14px}
+.calc td{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.calc td:last-child{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.calc tr.tot td{border:0;font:800 20px/1.4 var(--f-head);color:var(--color-sun);padding-top:10px}
+
+/* Subscribe */
+.sub-sec{color:#fff;background:linear-gradient(rgba(14,165,233,.82),rgba(20,217,196,.78)),url("https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&w=1600&q=60") center/cover,var(--gradient-hero)}
+.sub-sec h2{color:#fff}
+.sub-box{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center}
+.sub-box>div>p{font-size:18px;opacity:.95}
+.sub-form{background:#fff;color:var(--color-text);border-radius:24px;padding:26px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sub-form .full{grid-column:1/-1}
+.sub-form label.l{display:block;font:600 13px/1.3 var(--f-body);color:var(--color-muted);margin-bottom:6px}
+.sub-form input[type=email],.sub-form select{width:100%;height:46px;border:1.5px solid var(--color-border);border-radius:12px;padding:0 12px;background:#fff;font-size:15px}
+.sub-form input:focus,.sub-form select:focus{border-color:var(--color-ocean);outline:none}
+.sub-form .chips .chip{padding:6px 11px;font-size:13px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--color-muted)}
+.consent input{margin-top:3px;accent-color:var(--color-ocean);width:17px;height:17px;flex-shrink:0}
+.sub-actions{display:flex;gap:10px;flex-wrap:wrap}
+.sub-actions .btn{flex:1}
+.btn-tg{background:#229ED9;color:#fff}
+.btn-tg:hover{transform:translateY(-2px)}
+.err{color:#DC2626;font-size:13px;margin:6px 0 0}
+.sub-ok{grid-column:1/-1;text-align:center;padding:24px 10px}
+.sub-ok .ill{font-size:52px}
+.sub-ok p{color:var(--color-muted)}
+
+/* FAQ */
+.faq{max-width:860px;margin:0 auto}
+.faq-item{border-radius:16px;background:#fff;box-shadow:0 4px 18px rgba(14,165,233,.08);margin-bottom:12px;border:1px solid #EAF6FD}
+.faq-q{width:100%;text-align:left;border:0;background:transparent;padding:20px 56px 20px 22px;font:700 17px/1.35 var(--f-head);color:var(--color-ocean-deep);cursor:pointer;position:relative}
+.faq-q::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--color-sky);display:grid;place-items:center;font-size:20px;color:var(--color-ocean);transition:transform .25s}
+.faq-q[aria-expanded=true]::after{transform:translateY(-50%) rotate(45deg);background:var(--color-ocean);color:#fff}
+.faq-a{padding:0 22px 20px;color:#475569;margin-top:-4px}
+.faq-a p{margin:0}
+
+/* Footer */
+.ftr{background:var(--color-ocean-deep);color:#CFE6F5;padding:64px 0 30px;position:relative}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.ftr .logo{color:#fff}
+.ftr h4{color:#fff;font:700 15px/1 var(--f-head);margin:0 0 14px}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:14px}
+.ftr a{text-decoration:none;opacity:.88}
+.ftr a:hover{opacity:1;color:#fff}
+.ftr p{font-size:14px}
+.partners{display:flex;flex-wrap:wrap;gap:8px}
+.partners span{border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:6px 10px;font:600 13px/1 var(--f-head);color:#fff}
+.disclaimer{border-top:1px solid rgba(255,255,255,.15);margin-top:40px;padding-top:22px;font-size:12.5px;opacity:.8;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;opacity:1}
+.social a:hover{background:var(--color-ocean)}
+
+/* Overlays */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);z-index:80;background:#fff;color:var(--color-text);border-radius:18px;box-shadow:var(--shadow-lg);padding:14px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:calc(100% - 32px);transition:transform .35s;border:1px solid var(--color-border)}
+.toast.show{transform:translate(-50%,0)}
+body.has-cookie .toast{bottom:auto;top:calc(var(--hdr) + 12px);transform:translate(-50%,-260%)}
+body.has-cookie .toast.show{transform:translate(-50%,0)}
+.toast p{margin:0;font-weight:500}
+.toast .btn{padding:10px 14px;font-size:13px}
+.modal-bg{position:fixed;inset:0;z-index:90;background:rgba(11,60,93,.45);backdrop-filter:blur(4px);display:grid;place-items:center;padding:16px}
+.modal-bg[hidden]{display:none}
+.modal{background:#fff;border-radius:24px;padding:28px;max-width:420px;width:100%;box-shadow:var(--shadow-lg);text-align:center;animation:pop .3s}
+.modal .ill{font-size:44px}
+.modal h3{margin:8px 0}
+.modal p{color:var(--color-muted)}
+.modal .row{display:flex;gap:10px;margin-top:18px}
+.modal .row .btn{flex:1}
+.cookie{position:fixed;left:16px;right:16px;margin:0 auto 0 0;bottom:16px;z-index:70;max-width:400px;background:#fff;border-radius:18px;box-shadow:var(--shadow-lg);padding:18px;font-size:14px;border:1px solid var(--color-border)}
+.cookie p{margin:0 0 12px;color:#475569}
+.cookie .row{display:flex;gap:8px;flex-wrap:wrap}
+.cookie .btn{padding:10px 14px;font-size:13px;flex:1}
+.sheet-overlay{position:fixed;inset:0;background:rgba(11,60,93,.45);z-index:59}
+.sheet-overlay[hidden]{display:none}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1199px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .c-grid{grid-template-columns:repeat(3,1fr)}
+  .nav{gap:16px}
+  .search{grid-template-columns:1fr 1fr 1fr;}
+  .search .btn{grid-column:span 3}
+}
+@media (max-width:1023px){
+  :root{--hdr:64px}
+  .nav{display:none;position:absolute;top:calc(var(--hdr) - 4px);left:16px;right:16px;flex-direction:column;gap:0;background:#fff;color:var(--color-ocean-deep);border-radius:18px;box-shadow:var(--shadow-lg);padding:8px 18px;margin:0}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--color-border)}
+  .nav a:last-child{border-bottom:0}
+  .burger{display:block;color:inherit}
+  .hdr-tools{margin-left:auto}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-text{order:1}.globe-wrap{order:2;width:min(76vw,520px)}
+  .lead{margin-left:auto;margin-right:auto}
+  .hero-cta,.hero-stats{justify-content:center}
+  .offers-layout{grid-template-columns:1fr}
+  .filters{position:fixed;top:auto;left:0;right:0;bottom:0;z-index:60;max-height:86vh;border-radius:24px 24px 0 0;transform:translateY(105%);transition:transform .35s ease;padding-bottom:max(22px,env(safe-area-inset-bottom))}
+  .filters.open{transform:none}
+  .f-close,.sheet-apply,.btn-filters{display:block}
+  .c-grid{grid-template-columns:repeat(2,1fr)}
+  .c-panel-cols{grid-template-columns:1fr}
+  .how-cols{grid-template-columns:1fr}
+  .formula{grid-template-columns:1fr}
+  .sub-box{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:767px){
+  body{font-size:15px}
+  .container{padding:0 16px}
+  .sec{padding:64px 0}
+  h2{font-size:28px}
+  h3{font-size:20px}
+  .hero{padding-bottom:90px}
+  .hero h1{font-size:34px}
+  .lead{font-size:16px}
+  .hero-stats{gap:18px}
+  .hero-stats b{font-size:22px}
+  .grid{grid-template-columns:1fr}
+  .search{grid-template-columns:1fr;padding:12px}
+  .search .btn{grid-column:auto}
+  .price strong{font-size:24px}
+  .sub-form{grid-template-columns:1fr;padding:20px}
+  .formula{padding:22px}
+  .fbar button{font-size:13px}
+  .ftr-grid{grid-template-columns:1fr}
+  .toolbar label span{display:none}
+}
+@media (max-width:540px){
+  .c-grid{grid-template-columns:1fr}
+  .c-card{min-height:220px}
+  .hdr .cur{display:none}
+  .sel select{max-width:120px}
+  .logo{font-size:19px}
+  .logo svg{width:28px;height:28px}
+  .toolbar p{flex-basis:100%;order:3}
+  .mini{flex-wrap:wrap}
+  .mini .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- ============ 1. HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="container hdr-in">
+    <a class="logo" href="#top" aria-label="HotGlobe — на главную">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lgL" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14D9C4"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient></defs><circle cx="18" cy="22" r="15" fill="url(#lgL)" stroke="#fff" stroke-width="1.5"/><path d="M3 22h30M18 7c-6 8-6 22 0 30M18 7c6 8 6 22 0 30" stroke="#fff" stroke-opacity=".75" stroke-width="1.6" fill="none"/><path d="M31 2c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 1 2 2 2 3 1-1-2-1-4 0-6z" fill="#FF6B4A"/></svg>
+      <span>Hot<b>Globe</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a href="#offers">Горящие туры</a>
+      <a href="#countries">Страны</a>
+      <a href="#departures">Города вылета</a>
+      <a href="#how">Как выбираем</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr-tools">
+      <label class="sel city"><span class="sr-only">Город вылета</span><span aria-hidden="true" id="hdrFlag">🇷🇺</span><select id="hdrCity" data-city></select></label>
+      <label class="sel cur"><span class="sr-only">Валюта</span><select id="hdrCur" data-cur></select></label>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ============ 2. HERO ============ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-sea" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="pill">🔥 Обновляем предложения каждые 15 минут</span>
+      <h1 id="h1">Горящие туры по всему миру — от <em>моря</em> до гор</h1>
+      <p class="lead">Находим путёвки со скидкой до 50 % и проверяем перелёт, отель и сервис</p>
+      <div class="hero-cta">
+        <a class="btn btn-cta" href="#offers" id="heroCta">Найти горящий тур</a>
+        <a class="btn btn-ghost" href="#how">Как мы выбираем</a>
+      </div>
+      <ul class="hero-stats">
+        <li><b id="statOffers">—</b><span>горящих туров<br>из <span id="statFrom">Москвы</span></span></li>
+        <li><b>16</b><span>стран<br>и 50+ курортов</span></li>
+        <li><b>23</b><span>города вылета<br>в 6 странах</span></li>
+      </ul>
+    </div>
+    <div class="globe-wrap" id="globeWrap">
+      <div class="globe-static" aria-hidden="true"><div class="gs-earth"></div><div class="gs-orbit"><span class="gs-plane">✈️</span></div></div>
+      <div class="globe-canvas" id="globe" role="img" aria-label="Вращающийся 3D-глобус с маркерами стран-направлений и маршрутами из выбранного города вылета"></div>
+      <div class="globe-tip" id="globeTip" hidden></div>
+      <p class="globe-hint" aria-hidden="true">Покрутите глобус и нажмите на точку страны</p>
+      <ul class="sr-only" id="globeList" aria-label="Страны на глобусе"></ul>
+    </div>
+  </div>
+  <div class="container">
+    <form class="search reveal" id="heroSearch" aria-label="Быстрый поиск тура">
+      <div class="s-field"><label for="sFrom">Откуда</label><select id="sFrom" data-city></select></div>
+      <div class="s-field"><label for="sTo">Куда</label><select id="sTo" data-country></select></div>
+      <div class="s-field"><label for="sDate">Вылет ± 3 дня</label><input type="date" id="sDate"></div>
+      <div class="s-field"><label for="sNights">Ночей</label>
+        <select id="sNights"><option value="3-5">3–5</option><option value="6-10" selected>6–10</option><option value="7-7">7</option><option value="10-14">10–14</option><option value="14-21">14–21</option></select></div>
+      <div class="s-field"><label for="sPax">Туристы</label>
+        <select id="sPax"><option value="1-0">1 взрослый</option><option value="2-0" selected>2 взрослых</option><option value="2-1">2 взр. + 1 ребёнок</option><option value="2-2">2 взр. + 2 детей</option><option value="3-0">3 взрослых</option><option value="4-0">4 взрослых</option></select></div>
+      <button class="btn btn-cta" type="submit">Найти</button>
+    </form>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,44 C200,84 420,4 720,34 C1000,62 1220,14 1440,40 L1440,80 L0,80 Z" fill="#fff"/></svg>
+</section>
+
+<!-- ============ 3–4. FILTERS + OFFERS ============ -->
+<section id="offers" class="sec offers-sec" aria-labelledby="offersH">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Горящие предложения</span>
+      <h2 id="offersH">Лучшие туры из <span id="offFrom">Москвы</span></h2>
+      <p>Сортируем по индексу выгоды: скидка, цена, перелёт и качество отеля в одной оценке</p>
+    </div>
+    <div class="offers-layout">
+      <aside class="filters" id="filters" aria-label="Фильтры">
+        <div class="f-head"><h3>Фильтры</h3><button type="button" class="f-close" id="closeFilters" aria-label="Закрыть фильтры">✕</button></div>
+        <div class="f-group"><label for="fFrom">Город вылета</label><select id="fFrom" data-city></select></div>
+        <div class="f-group"><label for="fTo">Страна назначения</label><select id="fTo" data-country></select></div>
+        <div class="f-group"><span class="f-lbl">Даты вылета</span>
+          <div class="f-row"><input type="date" id="fDf" aria-label="Вылет с"><span>—</span><input type="date" id="fDt" aria-label="Вылет по"></div></div>
+        <div class="f-group"><span class="f-lbl">Ночей</span>
+          <div class="f-row"><input type="number" id="fNmin" min="3" max="21" aria-label="Ночей от"><span>—</span><input type="number" id="fNmax" min="3" max="21" aria-label="Ночей до"></div></div>
+        <div class="f-group"><span class="f-lbl">Туристы</span>
+          <div class="counter"><span>Взрослые</span><button type="button" data-cnt="ad" data-d="-1" aria-label="Убрать взрослого">−</button><output id="cAd" aria-live="polite">2</output><button type="button" data-cnt="ad" data-d="1" aria-label="Добавить взрослого">+</button></div>
+          <div class="counter"><span>Дети <small style="color:var(--color-muted)">(2–12 лет)</small></span><button type="button" data-cnt="ch" data-d="-1" aria-label="Убрать ребёнка">−</button><output id="cCh" aria-live="polite">0</output><button type="button" data-cnt="ch" data-d="1" aria-label="Добавить ребёнка">+</button></div></div>
+        <div class="f-group"><label for="fBudget">Бюджет: <b id="budgetVal" style="color:var(--color-ocean-deep)">любой</b></label>
+          <input type="range" id="fBudget" min="60000" max="800000" step="10000"></div>
+        <div class="f-group"><span class="f-lbl">Питание</span><div class="chips" id="fMeal"></div></div>
+        <div class="f-group"><span class="f-lbl">Звёзды отеля</span><div class="chips" id="fStars"></div></div>
+        <div class="f-group">
+          <label class="toggle"><input type="checkbox" id="fDirect"><span></span>Только прямые рейсы</label>
+          <label class="toggle"><input type="checkbox" id="fTransfer"><span></span>Трансфер включён</label>
+        </div>
+        <div class="f-group"><label for="fCur">Валюта</label><select id="fCur" data-cur></select></div>
+        <button type="button" class="btn btn-outline wide" id="reset">Сбросить фильтры</button>
+        <button type="button" class="btn btn-cta wide sheet-apply" id="applySheet">Показать туры</button>
+      </aside>
+
+      <div class="offers-main">
+        <div class="toolbar">
+          <button type="button" class="btn-filters" id="openFilters" aria-controls="filters">Фильтры<span id="fCount"></span></button>
+          <p id="resCount" aria-live="polite"></p>
+          <label><span>Сортировка</span>
+            <select id="sort">
+              <option value="value">По индексу выгоды</option>
+              <option value="price">Сначала дешёвые</option>
+              <option value="discount">По размеру скидки</option>
+              <option value="rating">По рейтингу отеля</option>
+              <option value="date">Ближайший вылет</option>
+            </select></label>
+        </div>
+        <div class="notice" id="partial" hidden role="status">Часть партнёров временно недоступна — показываем предложения остальных.</div>
+        <div class="grid" id="grid" aria-busy="false"></div>
+        <div class="more-wrap"><button type="button" id="more" class="btn btn-outline" hidden>Показать ещё</button></div>
+        <p class="demo-note">Демо-версия: предложения сгенерированы для примера. В рабочей версии данные приходят от партнёров (Level.Travel, Travelpayouts) через серверный прокси <code>/api/offers</code>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sheet-overlay" id="sheetOverlay" hidden></div>
+
+<!-- ============ 5. COUNTRIES ============ -->
+<section id="countries" class="sec" aria-labelledby="cH">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Направления</span>
+      <h2 id="cH">Куда полететь</h2>
+      <p>Выберите страну — покажем курорты, лучшие предложения и время в пути из вашего города</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Категории направлений" id="cTabs"></div>
+    <div class="c-grid" id="cGrid"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,4 500,76 760,40 C1020,6 1240,60 1440,30 L1440,80 L0,80 Z" fill="#E0F4FF"/></svg>
+</section>
+
+<!-- ============ 6. DEPARTURES ============ -->
+<section id="departures" class="sec dep-sec" aria-labelledby="dH">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Города вылета</span>
+      <h2 id="dH">Вылетаем из 23 городов</h2>
+      <p>Минимальная цена горящего тура для двоих из каждого города. Нажмите, чтобы выбрать город вылета</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Страны вылета" id="dTabs"></div>
+    <div class="d-chips" id="dChips" role="tabpanel"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0,44 C200,84 420,4 720,34 C1000,62 1220,14 1440,40 L1440,80 L0,80 Z" fill="#fff"/></svg>
+</section>
+
+<!-- ============ 7. HOW ============ -->
+<section id="how" class="sec" aria-labelledby="hH">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Индекс выгоды</span>
+      <h2 id="hH">Как мы выбираем туры</h2>
+      <p>Дешёвый тур — не всегда выгодный. Каждое предложение получает оценку от 0 до 100</p>
+    </div>
+    <div class="how-cols">
+      <article class="how-card reveal">
+        <div class="how-ic" style="background:var(--gradient-cta)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+        <h3>Цена</h3><p>Сравниваем цену с медианой по направлению и показываем реальную скидку</p>
+      </article>
+      <article class="how-card reveal">
+        <div class="how-ic" style="background:linear-gradient(135deg,#0EA5E9,#14D9C4)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div>
+        <h3>Логистика</h3><p>Прямые рейсы, удобное время вылета, включённый трансфер и багаж</p>
+      </article>
+      <article class="how-card reveal">
+        <div class="how-ic" style="background:linear-gradient(135deg,#FFC93C,#FF9A3C)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Сервис</h3><p>Рейтинг отеля от 6.5, достаточно отзывов, питание и линия пляжа</p>
+      </article>
+    </div>
+    <div class="formula reveal">
+      <div>
+        <h3>Формула индекса выгоды</h3>
+        <div class="fbar" id="fbar" role="group" aria-label="Веса составляющих индекса">
+          <button type="button" data-k="d" style="flex:35;background:#FF8A6B">35 %</button>
+          <button type="button" data-k="p" style="flex:20;background:#FFC93C">20 %</button>
+          <button type="button" data-k="l" style="flex:20;background:#5CD3F5">20 %</button>
+          <button type="button" data-k="s" style="flex:25;background:#5EEAD4">25 %</button>
+        </div>
+        <div class="flegend"><span><i style="background:#FF8A6B"></i>Скидка</span><span><i style="background:#FFC93C"></i>Цена за ночь</span><span><i style="background:#5CD3F5"></i>Логистика</span><span><i style="background:#5EEAD4"></i>Сервис</span></div>
+        <p class="fdesc" id="fdesc" aria-live="polite">Нажмите на часть шкалы, чтобы узнать, как считается составляющая.</p>
+      </div>
+      <div class="calc" id="calc"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. SUBSCRIBE ============ -->
+<section id="subscribe" class="sec sub-sec" aria-labelledby="subH">
+  <div class="container sub-box">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#fff;opacity:.9">Подписка</span>
+      <h2 id="subH">Горящие туры — первыми</h2>
+      <p>Пришлём лучшие предложения из вашего города, как только цена упадёт. Не чаще 2 раз в неделю.</p>
+    </div>
+    <form class="sub-form reveal" id="subForm" novalidate>
+      <div class="full"><label class="l" for="subEmail">Email</label><input type="email" id="subEmail" autocomplete="email" placeholder="you@example.com" required><p class="err" id="errEmail" hidden>Введите корректный email</p></div>
+      <div><label class="l" for="subCity">Город вылета</label><select id="subCity" data-city></select></div>
+      <div><label class="l" for="subBudget">Бюджет на двоих</label>
+        <select id="subBudget"><option value="">Любой</option><option value="100000">до 100 000 ₽</option><option value="150000">до 150 000 ₽</option><option value="250000">до 250 000 ₽</option><option value="400000">до 400 000 ₽</option></select></div>
+      <div class="full"><span class="l" style="display:block;font:600 13px/1.3 var(--f-body);color:var(--color-muted);margin-bottom:6px">Интересные страны</span><div class="chips" id="subCountries"></div></div>
+      <label class="consent full"><input type="checkbox" id="subConsent"> <span>Я согласен(на) на обработку персональных данных в соответствии с <a href="#privacy">Политикой конфиденциальности</a></span></label>
+      <p class="err full" id="errConsent" hidden style="margin-top:-6px">Необходимо согласие на обработку данных</p>
+      <div class="sub-actions full">
+        <button class="btn btn-cta" type="submit">Подписаться</button>
+        <button class="btn btn-tg" type="button" id="tgBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.8 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-7.9c.4-.3-.1-.5-.6-.2L6.8 13l-4.6-1.4c-1-.3-1-1 .2-1.5L20.5 3c.8-.3 1.6.2 1.4 1.3z"/></svg>В Telegram</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 9. FAQ ============ -->
+<section id="faq" class="sec" aria-labelledby="faqH">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">FAQ</span><h2 id="faqH">Частые вопросы</h2></div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<!-- ============ 10. FOOTER ============ -->
+<footer class="ftr">
+  <div class="container">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="18" cy="22" r="15" fill="#0EA5E9" stroke="#fff" stroke-width="1.5"/><path d="M3 22h30M18 7c-6 8-6 22 0 30M18 7c6 8 6 22 0 30" stroke="#fff" stroke-opacity=".75" stroke-width="1.6" fill="none"/><path d="M31 2c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 3-6 1 2 2 2 3 1-1-2-1-4 0-6z" fill="#FF6B4A"/></svg><span>Hot<b>Globe</b></span></a>
+        <p>Собираем горящие путёвки у проверенных партнёров и показываем самые выгодные — с удобным перелётом и хорошим отелем.</p>
+        <div class="social">
+          <a href="#subscribe" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M21.9 4.3 18.8 19c-.2 1-.8 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-7.9c.4-.3-.1-.5-.6-.2L6.8 13l-4.6-1.4c-1-.3-1-1 .2-1.5L20.5 3c.8-.3 1.6.2 1.4 1.3z"/></svg></a>
+          <a href="#subscribe" aria-label="ВКонтакте"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.2h3.1c.1 5.2 2.4 7.4 4.2 7.9V6.2h2.9v4.5c1.8-.2 3.7-2.2 4.3-4.5h2.9c-.5 2.8-2.5 4.8-4 5.6 1.5.7 3.8 2.4 4.7 5.7h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1h-.4z"/></svg></a>
+          <a href="#subscribe" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Разделы</h4><ul><li><a href="#offers">Горящие туры</a></li><li><a href="#countries">Страны</a></li><li><a href="#departures">Города вылета</a></li><li><a href="#how">Как выбираем</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Документы</h4><ul><li><a href="#privacy" id="privacy">Политика конфиденциальности</a></li><li><a href="#terms">Пользовательское соглашение</a></li><li><a href="#cookies" id="cookieSettings">Настройки cookies</a></li></ul></div>
+      <div><h4>Партнёры</h4><div class="partners"><span>Level.Travel</span><span>Travelpayouts</span><span>Aviasales</span><span>Travelata</span></div>
+        <h4 style="margin-top:22px">Контакты</h4><ul><li><a href="mailto:hello@hotglobe.example">hello@hotglobe.example</a></li></ul></div>
+    </div>
+    <div class="disclaimer">
+      <span>HotGlobe не является туроператором. Бронирование и оплата происходят на сайте партнёра. Цены актуальны на момент обновления и могут меняться.</span>
+      <span>© <span id="year">2026</span> HotGlobe</span>
+    </div>
+  </div>
+</footer>
+
+<noscript><div style="padding:16px;background:#FFF7E6;text-align:center">Популярные направления: Турция, Египет, ОАЭ, Таиланд, Вьетнам, Мальдивы, Абхазия, Грузия. Для поиска туров включите JavaScript.</div></noscript>
+
+<!-- Overlays -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-bg" id="modalBg" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalH" id="modal"></div></div>
+<div class="cookie" id="cookie" hidden role="dialog" aria-label="Cookies">
+  <p>Мы используем cookies для работы сайта и, с вашего согласия, для аналитики (Яндекс Метрика).</p>
+  <div class="row"><button class="btn btn-outline" type="button" id="cookieNo">Только необходимые</button><button class="btn btn-cta" type="button" id="cookieYes">Принять все</button></div>
+</div>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+</script>
+
+<script type="module">
+/* =========================================================
+   HotGlobe — фронтенд (демо на мок-данных по PRD)
+   ========================================================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem('hg_' + k)); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem('hg_' + k, JSON.stringify(v)); } catch (e) {} }
+};
+function track(event, params = {}) {
+  (window.dataLayer = window.dataLayer || []).push({ event, ...params });
+  if (typeof window.ym === 'function' && window.YM_ID) window.ym(window.YM_ID, 'reachGoal', event, params);
+  console.debug('[analytics]', event, params);
+}
+const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function plural(n, one, few, many) { const a = n % 10, b = n % 100; if (a === 1 && b !== 11) return one; if (a >= 2 && a <= 4 && (b < 10 || b >= 20)) return few; return many; }
+function hash(s) { let h = 2166136261 >>> 0; for (const c of s) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+/* ---------- Даты ---------- */
+const TODAY = new Date(); TODAY.setHours(0, 0, 0, 0);
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const parseISO = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const MIN_DATE = iso(TODAY), MAX_DATE = iso(addDays(TODAY, 60));
+const dfmt = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'short' });
+const fmtDate = s => dfmt.format(parseISO(s)).replace('.', '');
+const daysTo = s => Math.round((parseISO(s) - TODAY) / 864e5);
+const nf = n => new Intl.NumberFormat('ru-RU').format(n);
+const fmtDur = m => `${Math.floor(m / 60)} ч${m % 60 ? ' ' + (m % 60) + ' мин' : ''}`;
+
+/* ---------- Справочники (data/countries.json, data/departures.json) ---------- */
+const CATS = { sea: 'Море и пляжи', exotic: 'Экзотика', close: 'Близко и без визы', nature: 'Природа и горы' };
+const COUNTRIES = [
+  { code: 'TR', name: 'Турция', to: 'в Турцию', flag: '🇹🇷', cat: 'sea', lat: 36.9, lon: 30.7, base: 4200, meals: 'allinc', beach: true, hue: 195, img: '1519046904884-53103b34b206', resorts: ['Анталья', 'Кемер', 'Белек', 'Сиде', 'Аланья', 'Бодрум'], temp: [15, 16, 18, 21, 25, 30, 33, 33, 30, 26, 21, 17] },
+  { code: 'EG', name: 'Египет', to: 'в Египет', flag: '🇪🇬', cat: 'sea', lat: 27.2, lon: 33.8, base: 3600, meals: 'allinc', beach: true, hue: 30, img: '1539650116574-75c0c6d73f6e', resorts: ['Хургада', 'Шарм-эль-Шейх', 'Марса-Алам'], temp: [22, 23, 26, 29, 33, 35, 36, 36, 34, 31, 27, 23] },
+  { code: 'AE', name: 'ОАЭ', to: 'в ОАЭ', flag: '🇦🇪', cat: 'sea', lat: 25.2, lon: 55.3, base: 7200, meals: 'city', beach: true, hue: 25, img: '1512453979798-5ea266f8880c', resorts: ['Дубай', 'Абу-Даби', 'Рас-эль-Хайма', 'Фуджейра'], temp: [24, 25, 28, 33, 38, 40, 41, 41, 39, 35, 30, 26] },
+  { code: 'TN', name: 'Тунис', to: 'в Тунис', flag: '🇹🇳', cat: 'sea', lat: 36.4, lon: 10.6, base: 3300, meals: 'allinc', beach: true, hue: 185, img: '1590059390047-f5e617690a0b', resorts: ['Хаммамет', 'Сусс', 'Джерба'], temp: [16, 17, 19, 21, 25, 29, 32, 33, 30, 26, 21, 17] },
+  { code: 'TH', name: 'Таиланд', to: 'в Таиланд', flag: '🇹🇭', cat: 'exotic', lat: 7.9, lon: 98.4, base: 4700, meals: 'asia', beach: true, hue: 165, img: '1552465011-b4e21bf6e79a', resorts: ['Пхукет', 'Паттайя', 'Самуи', 'Краби'], temp: [32, 33, 34, 34, 32, 32, 31, 31, 31, 31, 31, 31] },
+  { code: 'VN', name: 'Вьетнам', to: 'во Вьетнам', flag: '🇻🇳', cat: 'exotic', lat: 12.2, lon: 109.2, base: 4300, meals: 'asia', beach: true, hue: 150, img: '1528127269322-539801943592', resorts: ['Нячанг', 'Фукуок', 'Фантхьет'], temp: [27, 28, 29, 31, 32, 32, 32, 32, 31, 29, 28, 27] },
+  { code: 'MV', name: 'Мальдивы', to: 'на Мальдивы', flag: '🇲🇻', cat: 'exotic', lat: 4.2, lon: 73.5, base: 15500, meals: 'island', beach: true, hue: 180, img: '1514282401047-d79a71a590e8', resorts: ['Мале', 'Атоллы'], temp: [30, 31, 31, 32, 31, 30, 30, 30, 30, 30, 30, 30] },
+  { code: 'LK', name: 'Шри-Ланка', to: 'на Шри-Ланку', flag: '🇱🇰', cat: 'exotic', lat: 6.4, lon: 80.0, base: 4400, meals: 'asia', beach: true, hue: 140, img: '1546708973-b339540b5162', resorts: ['Бентота', 'Хиккадува', 'Унаватуна'], temp: [30, 30, 31, 31, 30, 29, 29, 29, 29, 29, 29, 29] },
+  { code: 'ID', name: 'Индонезия', to: 'в Индонезию', flag: '🇮🇩', cat: 'exotic', lat: -8.4, lon: 115.2, base: 6000, meals: 'asia', beach: true, hue: 120, img: '1537996194471-e657df975ab4', resorts: ['Бали'], temp: [30, 30, 30, 31, 30, 29, 28, 29, 30, 31, 31, 30] },
+  { code: 'CN', name: 'Китай', to: 'в Китай', flag: '🇨🇳', cat: 'exotic', lat: 18.25, lon: 109.5, base: 5000, meals: 'asia', beach: true, hue: 175, img: '1540541338287-41700207dee6', resorts: ['Хайнань (Санья)'], temp: [25, 26, 28, 30, 32, 32, 32, 32, 31, 30, 28, 25] },
+  { code: 'CU', name: 'Куба', to: 'на Кубу', flag: '🇨🇺', cat: 'exotic', lat: 23.15, lon: -81.25, base: 5400, meals: 'allinc', beach: true, hue: 190, img: '1500759285222-a95626b934cb', resorts: ['Варадеро', 'Кайо-Коко'], temp: [26, 26, 28, 29, 30, 31, 32, 32, 31, 30, 28, 27] },
+  { code: 'AB', name: 'Абхазия', to: 'в Абхазию', flag: '🇦🇧', cat: 'close', lat: 43.3, lon: 40.3, base: 2500, meals: 'city', beach: true, hue: 160, img: '1506905925346-21bda4d32df4', resorts: ['Гагра', 'Пицунда', 'Сухум'], temp: [10, 10, 13, 17, 21, 25, 28, 28, 25, 20, 15, 12] },
+  { code: 'GE', name: 'Грузия', to: 'в Грузию', flag: '🇬🇪', cat: 'close', lat: 41.65, lon: 41.64, base: 3400, meals: 'city', beach: true, hue: 15, img: '1565008576549-57569a49371d', resorts: ['Батуми', 'Тбилиси'], temp: [10, 10, 12, 16, 20, 24, 27, 27, 24, 20, 15, 12] },
+  { code: 'RU', name: 'Россия', to: 'по России', flag: '🇷🇺', cat: 'close', lat: 43.6, lon: 39.7, base: 4400, meals: 'city', beach: true, hue: 205, img: '1547448415-e9f5b28e570d', resorts: ['Сочи', 'Калининград', 'Алтай'], temp: [10, 10, 13, 17, 21, 25, 28, 28, 24, 20, 15, 12] },
+  { code: 'AM', name: 'Армения', to: 'в Армению', flag: '🇦🇲', cat: 'nature', lat: 40.18, lon: 44.5, base: 3100, meals: 'city', beach: false, hue: 20, img: '1558981403-c5f9899a28bc', resorts: ['Ереван', 'Дилижан', 'Севан'], temp: [1, 4, 11, 18, 23, 28, 33, 33, 28, 20, 11, 4] },
+  { code: 'KZ', name: 'Казахстан', to: 'в Казахстан', flag: '🇰🇿', cat: 'nature', lat: 43.24, lon: 76.9, base: 3700, meals: 'city', beach: false, hue: 200, img: '1506905925346-21bda4d32df4', resorts: ['Алматы', 'Боровое'], temp: [-1, 1, 9, 18, 23, 28, 31, 30, 24, 16, 7, 1] }
+];
+const C_BY = Object.fromEntries(COUNTRIES.map(c => [c.code, c]));
+const DEP_COUNTRIES = [
+  { cc: 'RU', name: 'Россия', flag: '🇷🇺', cur: 'RUB' }, { cc: 'KZ', name: 'Казахстан', flag: '🇰🇿', cur: 'KZT' },
+  { cc: 'BY', name: 'Беларусь', flag: '🇧🇾', cur: 'BYN' }, { cc: 'UZ', name: 'Узбекистан', flag: '🇺🇿', cur: 'UZS' },
+  { cc: 'AM', name: 'Армения', flag: '🇦🇲', cur: 'AMD' }, { cc: 'KG', name: 'Кыргызстан', flag: '🇰🇬', cur: 'KGS' }
+];
+const DC_BY = Object.fromEntries(DEP_COUNTRIES.map(c => [c.cc, c]));
+const DEPS = [
+  ['MOW', 'Москва', 'Москвы', 'RU', 55.75, 37.62], ['LED', 'Санкт-Петербург', 'Санкт-Петербурга', 'RU', 59.94, 30.31],
+  ['SVX', 'Екатеринбург', 'Екатеринбурга', 'RU', 56.84, 60.6], ['OVB', 'Новосибирск', 'Новосибирска', 'RU', 55.03, 82.92],
+  ['KZN', 'Казань', 'Казани', 'RU', 55.79, 49.12], ['KRR', 'Краснодар', 'Краснодара', 'RU', 45.04, 38.98],
+  ['AER', 'Сочи', 'Сочи', 'RU', 43.6, 39.73], ['KUF', 'Самара', 'Самары', 'RU', 53.2, 50.15],
+  ['UFA', 'Уфа', 'Уфы', 'RU', 54.73, 55.96], ['ROV', 'Ростов-на-Дону', 'Ростова-на-Дону', 'RU', 47.23, 39.7],
+  ['GOJ', 'Нижний Новгород', 'Нижнего Новгорода', 'RU', 56.33, 44.0], ['PEE', 'Пермь', 'Перми', 'RU', 58.01, 56.25],
+  ['KJA', 'Красноярск', 'Красноярска', 'RU', 56.01, 92.85], ['VVO', 'Владивосток', 'Владивостока', 'RU', 43.12, 131.9],
+  ['ALA', 'Алматы', 'Алматы', 'KZ', 43.24, 76.9], ['NQZ', 'Астана', 'Астаны', 'KZ', 51.17, 71.43],
+  ['CIT', 'Шымкент', 'Шымкента', 'KZ', 42.3, 69.6], ['SCO', 'Актау', 'Актау', 'KZ', 43.65, 51.17],
+  ['MSQ', 'Минск', 'Минска', 'BY', 53.9, 27.57], ['TAS', 'Ташкент', 'Ташкента', 'UZ', 41.3, 69.24],
+  ['SKD', 'Самарканд', 'Самарканда', 'UZ', 39.65, 66.96], ['EVN', 'Ереван', 'Еревана', 'AM', 40.18, 44.5],
+  ['FRU', 'Бишкек', 'Бишкека', 'KG', 42.87, 74.6]
+].map(([code, name, gen, cc, lat, lon]) => ({ code, name, gen, cc, lat, lon, active: true }));
+const DEP_BY = Object.fromEntries(DEPS.map(d => [d.code, d]));
+const BIG = new Set(['MOW', 'LED', 'SVX', 'KZN', 'ALA', 'NQZ', 'TAS', 'MSQ', 'EVN', 'FRU', 'OVB']);
+const CURR = {
+  RUB: { sym: '₽', rate: 1, round: 100 }, KZT: { sym: '₸', rate: 6.1, round: 500 }, BYN: { sym: 'Br', rate: 0.038, round: 1 },
+  UZS: { sym: 'сум', rate: 152, round: 10000 }, AMD: { sym: '֏', rate: 4.75, round: 500 }, KGS: { sym: 'сом', rate: 1.06, round: 100 }
+};
+const MEAL = { RO: 'Без питания', BB: 'Завтраки', HB: 'Полупансион', FB: 'Полный пансион', AI: 'Всё включено', UAI: 'Ультра всё включено' };
+const MEAL_F = { RO: .78, BB: .86, HB: .95, FB: 1.02, AI: 1.12, UAI: 1.32 };
+const MEAL_SETS = { allinc: ['AI', 'AI', 'UAI', 'HB', 'BB', 'UAI'], city: ['BB', 'BB', 'HB', 'RO', 'FB'], asia: ['BB', 'BB', 'HB', 'RO', 'AI'], island: ['HB', 'FB', 'AI', 'BB', 'AI'] };
+const STAR_F = { 3: .72, 4: 1, 5: 1.5 };
+const HOTEL_IMGS = ['1566073771259-6a8506099945', '1571896349842-33c89424de2d', '1520250497591-112f2f40a3f4', '1582719508461-905c673771fd', '1551882547-ff40c63fe5fa', '1540541338287-41700207dee6', '1542314831-068cd1dbfeeb', '1445019980597-93fa8acb246c', '1611892440504-42a792e24d32', '1584132967334-10e028bd69f7', '1507525428034-b723cf961d3e', '1519046904884-53103b34b206'];
+const unsplash = (id, w) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=65`;
+const NAMES_A = ['Sunrise', 'Blue Lagoon', 'Coral Bay', 'Palm Garden', 'Royal', 'Grand', 'Sea Breeze', 'Golden Sands', 'Paradise', 'Aqua', 'Horizon', 'Laguna', 'Marina', 'Oasis', 'Crystal', 'Emerald', 'Azure', 'Sunset', 'Tropical', 'Pearl', 'Riviera', 'Magnolia', 'Orchid', 'Dolphin'];
+const NAMES_B = ['Resort & Spa', 'Beach Hotel', 'Club', 'Suites', 'Boutique Hotel', 'Family Resort', 'Palace', 'Garden Hotel'];
+
+/* ---------- Отели (стабильны для всех городов вылета) ---------- */
+const HOTELS = [];
+COUNTRIES.forEach(c => {
+  const per = Math.max(3, Math.ceil(9 / c.resorts.length));
+  c.resorts.forEach(resort => {
+    for (let k = 0; k < per; k++) {
+      const r = rng(hash(c.code + resort + k));
+      const sr = r(); const stars = sr < .2 ? 3 : sr < .62 ? 4 : 5;
+      const lowQ = r() < .1;
+      const rating = Math.round((lowQ ? 5.3 + r() * 1.1 : Math.min(9.8, 6.9 + r() * 2.2 + (stars - 4) * .35)) * 10) / 10;
+      const reviews = lowQ && r() < .5 ? Math.floor(4 + r() * 15) : Math.floor(35 + Math.pow(r(), 1.5) * 2800);
+      const set = MEAL_SETS[c.meals]; const meal = set[Math.floor(r() * set.length)];
+      const beachLine = c.beach && !['Тбилиси', 'Алтай', 'Ереван', 'Дилижан'].includes(resort) ? 1 + Math.floor(r() * r() * 3) : 0;
+      const name = `${NAMES_A[Math.floor(r() * NAMES_A.length)]} ${NAMES_B[Math.floor(r() * NAMES_B.length)]}`;
+      HOTELS.push({ id: c.code + '_' + hash(resort + k).toString(36), c, resort, stars, rating, reviews, meal, beachLine, name, img: HOTEL_IMGS[Math.floor(r() * HOTEL_IMGS.length)] });
+    }
+  });
+});
+
+/* ---------- Генерация предложений (имитация /api/offers) ---------- */
+function km(a, b) {
+  const R = 6371, t = Math.PI / 180, dLat = (b.lat - a.lat) * t, dLon = (b.lon - a.lon) * t;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * t) * Math.cos(b.lat * t) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+const flightMin = dist => Math.round((dist / 780 * 60 + 35) / 5) * 5;
+const round100 = v => Math.round(v / 100) * 100;
+const cache = new Map();
+function offersFor(code) {
+  if (cache.has(code)) return cache.get(code);
+  const dep = DEP_BY[code], r = rng(hash('dep:' + code + iso(TODAY))), big = BIG.has(code), list = [];
+  HOTELS.forEach(h => {
+    const c = h.c, dist = km(dep, c);
+    if (dist < 150) return;
+    for (let j = 0; j < 3; j++) {
+      const direct = r() < (big ? .85 : .45) * (dist > 7000 ? .55 : 1);
+      let dur = flightMin(dist); if (!direct) dur += 90 + Math.round(r() * 48) * 5;
+      const hh = Math.floor(r() * 24), mm = [0, 15, 30, 45][Math.floor(r() * 4)];
+      const start = iso(addDays(TODAY, 1 + Math.floor(r() * 60)));
+      const nights = 4 + Math.floor(r() * 11);
+      const baggage = r() < .72, trIncl = r() < .76, trDur = 20 + Math.floor(r() * 21) * 5;
+      const perNightPP = c.base * STAR_F[h.stars] * MEAL_F[h.meal] * (.85 + r() * .35);
+      const flightPP = (direct ? 1 : .82) * (7000 + dist * 2.3);
+      const old = round100((perNightPP * nights + flightPP) * 2 * (1.08 + r() * .12));
+      const disc = 8 + Math.pow(r(), 1.25) * 42;
+      const current = round100(old * (1 - disc / 100));
+      const provider = r() < .7 ? 'Level.Travel' : 'Travelata';
+      list.push({
+        id: `${provider === 'Level.Travel' ? 'lt' : 'tr'}_${hash(h.id + code + j).toString(36)}`, provider, dep: code, c, h, resort: h.resort, start, nights,
+        flight: { direct, dur, time: `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`, hour: hh, baggage },
+        transfer: { incl: trIncl, dur: trDur }, old, current, perNight: current / nights,
+        discount: Math.round((1 - current / old) * 100), upd: 1 + Math.floor(r() * 14),
+        deeplink: (provider === 'Level.Travel' ? 'https://level.travel/' : 'https://travelata.ru/') + '?marker=HOTGLOBE_DEMO'
+      });
+    }
+  });
+  scoreAll(list);
+  cache.set(code, list);
+  return list;
+}
+
+/* ---------- Индекс выгоды (server/scoring.js по разделу 3.3) ---------- */
+function scoreAll(list) {
+  const by = {};
+  list.forEach(o => (by[o.c.code] ||= []).push(o.perNight));
+  const med = {};
+  for (const k in by) { const a = by[k].sort((x, y) => x - y); med[k] = a[a.length >> 1]; }
+  list.forEach(o => {
+    const f = o.flight, h = o.h;
+    let logistics = (f.direct ? 35 : 10) + (f.dur <= 240 ? 20 : f.dur <= 420 ? 12 : 5) + (f.hour >= 7 && f.hour < 22 ? 10 : 0) + (f.baggage ? 10 : 0) + (o.transfer.incl ? 15 : 0) + (o.transfer.dur <= 60 ? 10 : 0);
+    let service = Math.min(h.rating * 5, 50) + (h.reviews >= 300 ? 10 : h.reviews >= 50 ? 5 : 0) + Math.min(h.stars * 4, 20) + ({ AI: 15, UAI: 15, HB: 10, FB: 10, BB: 5, RO: 0 }[h.meal]) + (h.beachLine === 1 ? 5 : 0);
+    logistics = Math.min(100, Math.round(logistics)); service = Math.min(100, Math.round(service));
+    const discountScore = Math.min(o.discount * 2.5, 100);
+    const priceScore = clamp(100 - (o.perNight / med[o.c.code] - 1) * 100, 0, 100);
+    const value = Math.round(.35 * discountScore + .2 * priceScore + .2 * logistics + .25 * service);
+    o.scores = { logistics, service, value, discountScore: Math.round(discountScore), priceScore: Math.round(priceScore) };
+  });
+}
+const qualityOK = o => o.h.rating >= 6.5 && o.h.reviews >= 20;
+
+/* ---------- Состояние фильтров + URL ---------- */
+const DEF = () => ({ from: 'MOW', to: '', df: MIN_DATE, dt: iso(addDays(TODAY, 14)), nmin: 6, nmax: 10, ad: 2, ch: 0, budget: 0, meal: [], stars: [], direct: false, transfer: false, sort: 'value', cur: '' });
+let state = DEF(), page = 1;
+const curCode = () => state.cur || DC_BY[DEP_BY[state.from].cc].cur;
+const travF = () => (state.ad + state.ch * .6) / 2;
+function money(rub, approxAllowed = true) {
+  const k = curCode(), c = CURR[k];
+  const v = Math.max(c.round, Math.round(rub * c.rate / c.round) * c.round);
+  return `${approxAllowed && k !== 'RUB' ? '≈ ' : ''}${nf(v)} ${c.sym}`;
+}
+function travText() {
+  let s = `${state.ad} ${plural(state.ad, 'взрослого', 'взрослых', 'взрослых')}`;
+  if (state.ch) s += ` и ${state.ch} ${plural(state.ch, 'ребёнка', 'детей', 'детей')}`;
+  return s;
+}
+function readURL() {
+  const p = new URLSearchParams(location.search);
+  if (![...p.keys()].length) return false;
+  const s = DEF();
+  if (DEP_BY[p.get('from')]) s.from = p.get('from');
+  if (C_BY[p.get('to')]) s.to = p.get('to');
+  const okD = v => /^\d{4}-\d{2}-\d{2}$/.test(v || '') && v >= MIN_DATE && v <= MAX_DATE;
+  if (okD(p.get('df'))) s.df = p.get('df');
+  if (okD(p.get('dt'))) s.dt = p.get('dt');
+  if (s.dt < s.df) s.dt = s.df;
+  const n = (p.get('nights') || '').split('-').map(Number);
+  if (n.length === 2 && n.every(x => x >= 3 && x <= 21)) { s.nmin = Math.min(...n); s.nmax = Math.max(...n); }
+  if (p.get('ad')) s.ad = clamp(parseInt(p.get('ad')) || 2, 1, 6);
+  if (p.get('ch')) s.ch = clamp(parseInt(p.get('ch')) || 0, 0, 4);
+  if (p.get('budget')) s.budget = clamp(parseInt(p.get('budget')) || 0, 0, 800000);
+  if (p.get('meal')) s.meal = p.get('meal').split(',').filter(m => MEAL[m]);
+  if (p.get('stars')) s.stars = p.get('stars').split(',').map(Number).filter(x => [3, 4, 5].includes(x));
+  s.direct = p.get('direct') === '1'; s.transfer = p.get('transfer') === '1';
+  if (['value', 'price', 'discount', 'rating', 'date'].includes(p.get('sort'))) s.sort = p.get('sort');
+  if (CURR[p.get('cur')]) s.cur = p.get('cur');
+  state = s;
+  return true;
+}
+function writeURL() {
+  const d = DEF(), p = new URLSearchParams();
+  p.set('from', state.from);
+  if (state.to) p.set('to', state.to);
+  if (state.df !== d.df) p.set('df', state.df);
+  if (state.dt !== d.dt) p.set('dt', state.dt);
+  if (state.nmin !== d.nmin || state.nmax !== d.nmax) p.set('nights', `${state.nmin}-${state.nmax}`);
+  if (state.ad !== 2) p.set('ad', state.ad);
+  if (state.ch) p.set('ch', state.ch);
+  if (state.budget) p.set('budget', state.budget);
+  if (state.meal.length) p.set('meal', state.meal.join(','));
+  if (state.stars.length) p.set('stars', state.stars.join(','));
+  if (state.direct) p.set('direct', '1');
+  if (state.transfer) p.set('transfer', '1');
+  if (state.sort !== 'value') p.set('sort', state.sort);
+  if (state.cur) p.set('cur', state.cur);
+  try { history.replaceState(null, '', `${location.pathname}?${p.toString().replace(/%2C/g, ',')}${location.hash}`); } catch (e) {}
+}
+function activeFilterCount() {
+  const d = DEF(); let n = 0;
+  if (state.to) n++; if (state.df !== d.df || state.dt !== d.dt) n++; if (state.nmin !== d.nmin || state.nmax !== d.nmax) n++;
+  if (state.ad !== 2 || state.ch) n++; if (state.budget) n++; if (state.meal.length) n++; if (state.stars.length) n++;
+  if (state.direct) n++; if (state.transfer) n++;
+  return n;
+}
+
+/* ---------- Выборка ---------- */
+function filtered() {
+  const s = state, f = travF();
+  const list = offersFor(s.from).filter(o =>
+    (!s.to || o.c.code === s.to) && o.start >= s.df && o.start <= s.dt && o.nights >= s.nmin && o.nights <= s.nmax &&
+    (!s.budget || o.current * f <= s.budget) && (!s.meal.length || s.meal.includes(o.h.meal)) &&
+    (!s.stars.length || s.stars.includes(o.h.stars)) && (!s.direct || o.flight.direct) && (!s.transfer || o.transfer.incl) &&
+    (s.sort !== 'value' || qualityOK(o)));
+  const cmp = {
+    value: (a, b) => b.scores.value - a.scores.value || a.current - b.current,
+    price: (a, b) => a.current - b.current, discount: (a, b) => b.discount - a.discount,
+    rating: (a, b) => b.h.rating - a.h.rating || b.h.reviews - a.h.reviews, date: (a, b) => a.start.localeCompare(b.start) || b.scores.value - a.scores.value
+  }[s.sort];
+  return list.sort(cmp);
+}
+function countryStats(code) {
+  const st = {};
+  offersFor(code).forEach(o => {
+    const k = o.c.code, s = (st[k] ||= { min: Infinity, count: 0, best: 0 });
+    s.count++; if (o.current < s.min) s.min = o.current; if (qualityOK(o) && o.scores.value > s.best) s.best = o.scores.value;
+  });
+  return st;
+}
+
+/* ---------- Рендер: селекты ---------- */
+function fillSelects() {
+  const cityOpts = DEP_COUNTRIES.map(dc => `<optgroup label="${dc.flag} ${dc.name}">${DEPS.filter(d => d.cc === dc.cc && d.active).map(d => `<option value="${d.code}">${d.name}</option>`).join('')}</optgroup>`).join('');
+  $$('[data-city]').forEach(s => s.innerHTML = cityOpts);
+  const cOpts = `<option value="">Любая страна</option>` + Object.entries(CATS).map(([k, v]) => `<optgroup label="${v}">${COUNTRIES.filter(c => c.cat === k).map(c => `<option value="${c.code}">${c.flag} ${c.name}</option>`).join('')}</optgroup>`).join('');
+  $$('[data-country]').forEach(s => s.innerHTML = cOpts);
+  $$('[data-cur]').forEach(s => s.innerHTML = Object.entries(CURR).map(([k, v]) => `<option value="${k}">${k} ${v.sym}</option>`).join(''));
+  $('#fMeal').innerHTML = Object.keys(MEAL).map(m => `<label class="chip" title="${MEAL[m]}"><input type="checkbox" value="${m}">${m}</label>`).join('');
+  $('#fStars').innerHTML = [3, 4, 5].map(s => `<label class="chip"><input type="checkbox" value="${s}">${s} ★</label>`).join('');
+  $('#subCountries').innerHTML = COUNTRIES.slice(0, 12).map(c => `<label class="chip"><input type="checkbox" value="${c.code}">${c.flag} ${c.name}</label>`).join('');
+  ['#fDf', '#fDt', '#sDate'].forEach(id => { $(id).min = MIN_DATE; $(id).max = MAX_DATE; });
+}
+function syncControls() {
+  const dep = DEP_BY[state.from];
+  $$('[data-city]').forEach(s => { if (s.id !== 'subCity' || !s.dataset.touched) s.value = state.from; });
+  $$('[data-cur]').forEach(s => s.value = curCode());
+  $('#hdrFlag').textContent = DC_BY[dep.cc].flag;
+  $('#fTo').value = state.to; $('#sTo').value = state.to;
+  $('#fDf').value = state.df; $('#fDt').value = state.dt; $('#fDt').min = state.df;
+  $('#fNmin').value = state.nmin; $('#fNmax').value = state.nmax;
+  $('#cAd').textContent = state.ad; $('#cCh').textContent = state.ch;
+  $('#fBudget').value = state.budget || 800000;
+  $('#budgetVal').textContent = state.budget ? 'до ' + money(state.budget) : 'любой';
+  $$('#fMeal input').forEach(i => i.checked = state.meal.includes(i.value));
+  $$('#fStars input').forEach(i => i.checked = state.stars.includes(+i.value));
+  $('#fDirect').checked = state.direct; $('#fTransfer').checked = state.transfer;
+  $('#sort').value = state.sort;
+  const n = activeFilterCount(); $('#fCount').textContent = n ? ` (${n})` : '';
+  $('#offFrom').textContent = dep.gen; $('#statFrom').textContent = dep.gen;
+  $('#statOffers').textContent = nf(offersFor(state.from).length);
+}
+
+/* ---------- Рендер: карточки ---------- */
+function cardHTML(o) {
+  const f = travF(), s = o.scores, h = o.h, dep = DEP_BY[o.dep];
+  const badges = [];
+  if (s.value >= 85) badges.push(['', '🔥 Лучшая выгода']);
+  if (s.logistics >= 85) badges.push(['', '✈️ Удобный перелёт']);
+  if (s.service >= 85) badges.push(['', '⭐ Отличный сервис']);
+  if (daysTo(o.start) <= 3) badges.push(['soon', '⏰ Вылет скоро']);
+  const vc = s.value >= 80 ? 'g' : s.value >= 60 ? 'y' : 'n';
+  return `<article class="card">
+    <div class="ph" style="--h:${o.c.hue}">
+      <img src="${unsplash(h.img, 640)}" srcset="${unsplash(h.img, 480)} 480w, ${unsplash(h.img, 960)} 960w" sizes="(max-width:767px) 100vw, 400px" loading="lazy" decoding="async" alt="Отель ${esc(h.name)}, ${esc(o.resort)}" onerror="this.remove()">
+      <span class="ph-emoji" aria-hidden="true">🏝️</span>
+      <span class="disc" aria-label="Скидка ${o.discount} процентов">−${o.discount} %</span>
+      <div class="badges">${badges.map(([c, t]) => `<span class="badge ${c}">${t}</span>`).join('')}</div>
+    </div>
+    <div class="cb">
+      <div class="loc">${o.c.flag} ${o.c.name} · ${esc(o.resort)}</div>
+      <h3 class="hn">${esc(h.name)} <span class="stars" aria-label="${h.stars} звезды">${'★'.repeat(h.stars)}</span></h3>
+      <div class="rating"><b>${h.rating.toFixed(1)}</b> · ${nf(h.reviews)} ${plural(h.reviews, 'отзыв', 'отзыва', 'отзывов')}</div>
+      <ul class="feat">
+        <li>✈️ ${o.flight.direct ? 'Прямой' : 'С пересадкой'} · ${fmtDur(o.flight.dur)}</li>
+        <li>🍽 ${MEAL[h.meal]}</li>
+        <li>🚐 ${o.transfer.incl ? `Трансфер ${o.transfer.dur} мин` : 'Без трансфера'}</li>
+        ${o.flight.baggage ? '<li>🧳 Багаж</li>' : ''}${h.beachLine ? `<li>🏖 ${h.beachLine}-я линия</li>` : ''}
+      </ul>
+      <div class="when">📅 ${fmtDate(o.start)} · ${o.nights} ${plural(o.nights, 'ночь', 'ночи', 'ночей')} · вылет из ${dep.gen} в ${o.flight.time}</div>
+      <div class="vidx ${vc}" title="Логистика ${s.logistics}, сервис ${s.service}"><span>Индекс выгоды</span><div class="bar" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${s.value}" aria-label="Индекс выгоды"><i style="width:${s.value}%"></i></div><b>${s.value}</b></div>
+      <div class="vsub">Логистика ${s.logistics} · Сервис ${s.service}</div>
+      <div class="price"><s>${money(o.old * f)}</s><strong>${money(o.current * f)}</strong><small>за ${travText()} · ${money(o.perNight * f)}/ночь</small></div>
+      <a class="btn btn-cta wide" href="${o.deeplink}" target="_blank" rel="noopener sponsored" data-offer="${o.id}">Смотреть тур</a>
+      <p class="src">Предложение от ${o.provider} · обновлено ${o.upd} мин назад</p>
+    </div>
+  </article>`;
+}
+const skeletons = n => Array.from({ length: n }, () => `<div class="skel" aria-hidden="true"><div class="s-ph shimmer"></div><div class="s-l shimmer"></div><div class="s-l w60 shimmer"></div><div class="s-l w40 shimmer"></div></div>`).join('');
+let current = [];
+function renderOffers() {
+  const grid = $('#grid');
+  try {
+    current = filtered();
+  } catch (e) {
+    console.error(e);
+    grid.innerHTML = `<div class="state"><div class="ill">⛈️</div><h3>Не удалось загрузить предложения</h3><p>Проверьте соединение и попробуйте ещё раз.</p><button class="btn btn-cta" type="button" data-act="retry">Повторить</button></div>`;
+    $('#more').hidden = true; grid.setAttribute('aria-busy', 'false'); return;
+  }
+  const shown = current.slice(0, page * 12);
+  $('#resCount').innerHTML = current.length ? `Найдено <b>${nf(current.length)}</b> ${plural(current.length, 'предложение', 'предложения', 'предложений')}${state.to ? ' ' + C_BY[state.to].to : ''}` : 'Ничего не найдено';
+  if (!current.length) {
+    grid.innerHTML = `<div class="state"><div class="ill">🏖️</div><h3>По этим параметрам горящих туров нет</h3>
+      <p>Попробуйте изменить даты ±3 дня или выбрать соседнюю страну</p>
+      <div class="chips"><button class="chip" type="button" data-act="widen">📅 Даты ±3 дня</button>${state.to ? '<button class="chip" type="button" data-act="anyc">🌍 Любая страна</button>' : ''}<button class="chip" type="button" data-act="reset">↺ Сбросить фильтры</button></div></div>`;
+  } else grid.innerHTML = shown.map(cardHTML).join('');
+  $('#more').hidden = shown.length >= current.length;
+  $('#more').textContent = `Показать ещё (${Math.min(12, current.length - shown.length)})`;
+  grid.setAttribute('aria-busy', 'false');
+  renderCalc();
+}
+let loadT;
+function refresh({ skeleton = true } = {}) {
+  writeURL(); syncControls();
+  const grid = $('#grid');
+  clearTimeout(loadT);
+  if (skeleton) {
+    grid.setAttribute('aria-busy', 'true'); grid.innerHTML = skeletons(6); $('#more').hidden = true;
+    loadT = setTimeout(renderOffers, 380);
+  } else renderOffers();
+  renderCountries(); renderDepartures(); updateGlobe();
+}
+const applyDebounced = debounce(() => { page = 1; refresh(); }, 400);
+
+/* ---------- Рендер: страны ---------- */
+let cTab = 'sea', openC = null;
+function seasonText(c) {
+  const t = c.temp[TODAY.getMonth()];
+  if (t >= 25) return `Сейчас сезон ☀️ +${t}°`;
+  if (t >= 17) return `Комфортно 🌤 +${t}°`;
+  return `Прохладно ⛅ ${t > 0 ? '+' : ''}${t}°`;
+}
+function renderCountries() {
+  $('#cTabs').innerHTML = Object.entries(CATS).map(([k, v]) => `<button class="tab" role="tab" type="button" aria-selected="${k === cTab}" data-cat="${k}">${v}</button>`).join('');
+  const st = countryStats(state.from), dep = DEP_BY[state.from], f = travF();
+  const list = COUNTRIES.filter(c => c.cat === cTab);
+  let html = '';
+  list.forEach(c => {
+    const s = st[c.code], dist = km(dep, c);
+    const time = dist < 150 ? 'Вы уже здесь' : `✈ ${fmtDur(flightMin(dist))}`;
+    html += `<button type="button" class="c-card" style="--h:${c.hue}" data-country="${c.code}" aria-expanded="${openC === c.code}" aria-controls="cPanel">
+      <img src="${unsplash(c.img, 720)}" loading="lazy" alt="" onerror="this.remove()">
+      ${s ? `<span class="c-count">🔥 ${s.count} ${plural(s.count, 'тур', 'тура', 'туров')}</span>` : ''}
+      <div class="c-in"><h3>${c.flag} ${c.name}</h3>
+        <div class="c-price">${s ? 'от ' + money(s.min * f) : 'нет туров'}</div>
+        <div class="c-meta"><span>${seasonText(c)}</span><span>${time}</span></div></div>
+    </button>`;
+  });
+  if (openC && C_BY[openC]?.cat === cTab) html += panelHTML(C_BY[openC]);
+  $('#cGrid').innerHTML = html;
+}
+function panelHTML(c) {
+  const f = travF();
+  const all = offersFor(state.from).filter(o => o.c.code === c.code);
+  const top = all.filter(qualityOK).sort((a, b) => b.scores.value - a.scores.value).slice(0, 3);
+  const resorts = c.resorts.map(r => { const m = all.filter(o => o.resort === r).reduce((a, o) => Math.min(a, o.current), Infinity); return `<span class="chip">${esc(r)}${isFinite(m) ? ` · <b style="color:var(--color-coral)">от ${money(m * f)}</b>` : ''}</span>`; }).join('');
+  return `<div class="c-panel" id="cPanel" role="region" aria-label="${c.name}">
+    <div class="c-panel-head"><div><h3>${c.flag} ${c.name}</h3><p>${seasonText(c)} · ${all.length} ${plural(all.length, 'предложение', 'предложения', 'предложений')} из ${DEP_BY[state.from].gen}</p></div>
+      <button type="button" class="btn btn-cta" data-all="${c.code}">Все туры ${c.to}</button></div>
+    <div class="c-panel-cols">
+      <div><h4>Курорты и города</h4><div class="chips">${resorts}</div>
+        <p class="visa-note">🛂 Уточните визовые требования для вашего гражданства — <a href="#faq">подробнее в FAQ</a>.</p></div>
+      <div><h4>Топ-3 по индексу выгоды</h4>${top.length ? top.map(o => `<div class="mini"><div class="mini-i"><b>${esc(o.h.name)} ${'★'.repeat(o.h.stars)}</b><span>${esc(o.resort)} · ${fmtDate(o.start)} · ${o.nights} ${plural(o.nights, 'ночь', 'ночи', 'ночей')} · индекс ${o.scores.value}</span></div>
+        <div class="mini-p">${money(o.current * f)}<small>−${o.discount} %</small></div><a class="btn btn-outline" href="${o.deeplink}" target="_blank" rel="noopener sponsored" data-offer="${o.id}">Смотреть</a></div>`).join('') : '<p style="color:var(--color-muted)">Из вашего города туров сейчас нет.</p>'}</div>
+    </div></div>`;
+}
+
+/* ---------- Рендер: города вылета ---------- */
+let dTab = null;
+function renderDepartures() {
+  if (!dTab) dTab = DEP_BY[state.from].cc;
+  $('#dTabs').innerHTML = DEP_COUNTRIES.map(dc => `<button class="tab" type="button" role="tab" aria-selected="${dc.cc === dTab}" data-dtab="${dc.cc}">${dc.flag} ${dc.name}</button>`).join('');
+  $('#dChips').innerHTML = DEPS.filter(d => d.cc === dTab && d.active).map(d => {
+    const min = offersFor(d.code).reduce((a, o) => Math.min(a, o.current), Infinity);
+    return `<button type="button" class="chip ${d.code === state.from ? 'on' : ''}" data-dep="${d.code}" aria-pressed="${d.code === state.from}">${d.name} · <b>от ${money(min * travF())}</b></button>`;
+  }).join('');
+}
+
+/* ---------- «Как выбираем»: пример расчёта ---------- */
+const FDESC = {
+  d: '<b>Скидка — 35 %.</b> discountScore = min(скидка × 2.5, 100). Скидка 40 % и больше даёт максимум.',
+  p: '<b>Цена за ночь — 20 %.</b> Сравниваем цену за ночь с медианой по направлению: дешевле медианы — выше балл.',
+  l: '<b>Логистика — 20 %.</b> Прямой рейс +35, время в пути до 4 ч +20, удобный вылет 07–22 +10, багаж +10, трансфер +15, трансфер ≤ 60 мин +10.',
+  s: '<b>Сервис — 25 %.</b> Рейтинг × 5 (до 50), отзывов ≥ 300 +10, звёзды × 4 (до 20), «всё включено» +15, первая линия +5.'
+};
+function renderCalc() {
+  const o = (current.length ? current : offersFor(state.from)).filter(qualityOK).sort((a, b) => b.scores.value - a.scores.value)[0];
+  if (!o) { $('#calc').innerHTML = ''; return; }
+  const s = o.scores, r1 = v => (Math.round(v * 10) / 10).toFixed(1).replace('.', ',');
+  $('#calc').innerHTML = `<h4>Пример: ${esc(o.h.name)} ${'★'.repeat(o.h.stars)}</h4><p class="hint">${o.c.flag} ${o.c.name}, ${esc(o.resort)} · лучший тур по вашим фильтрам</p>
+    <table><tr><td>Скидка ${o.discount} % → ${s.discountScore} × 0,35</td><td>${r1(s.discountScore * .35)}</td></tr>
+    <tr><td>Цена за ночь → ${s.priceScore} × 0,20</td><td>${r1(s.priceScore * .2)}</td></tr>
+    <tr><td>Логистика ${s.logistics} × 0,20</td><td>${r1(s.logistics * .2)}</td></tr>
+    <tr><td>Сервис ${s.service} × 0,25</td><td>${r1(s.service * .25)}</td></tr>
+    <tr class="tot"><td>Индекс выгоды</td><td>${s.value}</td></tr></table>`;
+}
+
+/* ---------- FAQ ---------- */
+const FAQ = [
+  ['Почему туры такие дешёвые?', 'Туроператоры заранее выкупают блоки мест в самолётах и отелях. Если за 1–14 дней до вылета места не проданы, их выгоднее продать со скидкой, чем оставить пустыми. Это и есть горящие туры.'],
+  ['Где я оплачиваю тур?', 'На сайте партнёра — туроператора или агрегатора (Level.Travel, Travelata и др.). HotGlobe не принимает оплату и не является туроператором: мы помогаем найти лучшее предложение.'],
+  ['Насколько актуальны цены?', 'Туры обновляются каждые 15 минут, авиацены — раз в час. Перед переходом к партнёру мы дополнительно проверяем цену и предупредим, если она изменилась больше чем на 5 %.'],
+  ['Что такое индекс выгоды?', 'Оценка от 0 до 100, которая учитывает размер скидки (35 %), цену за ночь относительно медианы по направлению (20 %), логистику (20 %) и сервис отеля (25 %). Подробнее — в разделе «Как мы выбираем туры».'],
+  ['Можно ли вернуть горящий тур?', 'Условия возврата устанавливает туроператор, у горящих туров они часто строже. Внимательно прочитайте условия на сайте партнёра перед оплатой и оформите страховку от невыезда.'],
+  ['Нужна ли виза?', 'Визовые требования зависят от вашего гражданства и могут меняться. Уточните их на официальном сайте консульства страны назначения до бронирования.'],
+  ['Как выбрать город вылета?', 'Выберите город в шапке сайта или в блоке «Города вылета» — мы определим ближайший автоматически. Цены, маршруты на глобусе и валюта подстроятся под выбранный город.']
+];
+function renderFAQ() {
+  $('#faqList').innerHTML = FAQ.map(([q, a], i) => `<div class="faq-item reveal"><h3 style="margin:0;font-size:inherit"><button class="faq-q" type="button" aria-expanded="false" aria-controls="fa${i}" id="fq${i}">${q}</button></h3><div class="faq-a" id="fa${i}" role="region" aria-labelledby="fq${i}" hidden><p>${a}</p></div></div>`).join('');
+}
+
+/* ---------- Глобальные действия ---------- */
+function setDeparture(code, src) {
+  if (!DEP_BY[code]) return;
+  const changed = code !== state.from;
+  state.from = code; state.cur = ''; page = 1; dTab = DEP_BY[code].cc;
+  store.set('from', code);
+  refresh();
+  if (changed) track('departure_change', { from: code, src });
+}
+function selectCountry(code, src) {
+  state.to = code; page = 1; refresh();
+  document.getElementById('offers').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  track(src === 'globe' ? 'globe_country_click' : 'country_card_click', { country: code });
+}
+const toastEl = $('#toast'); let toastT;
+function toast(html, ms = 4200) {
+  toastEl.innerHTML = html; toastEl.classList.add('show');
+  clearTimeout(toastT); if (ms) toastT = setTimeout(() => toastEl.classList.remove('show'), ms);
+}
+function openModal(html) { $('#modal').innerHTML = html; $('#modalBg').hidden = false; $('#modal').querySelector('button')?.focus(); }
+function closeModal() { $('#modalBg').hidden = true; }
+
+/* Проверка актуальности цены (/api/offers/:id/check) */
+function findOffer(id) { return offersFor(state.from).find(o => o.id === id); }
+function goOffer(o, price) {
+  track('offer_click', { provider: o.provider, country: o.c.code, price: Math.round(price), value: o.scores.value });
+  window.open(o.deeplink, '_blank', 'noopener');
+}
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[data-offer]');
+  if (!a) return;
+  const o = findOffer(a.dataset.offer); if (!o) return;
+  e.preventDefault();
+  const f = travF(), r = rng(hash(o.id + 'check'))();
+  if (r < .15) {
+    const np = round100(o.current * (1.06 + r * .4));
+    openModal(`<div class="ill">💸</div><h3 id="modalH">Цена обновилась: ${money(np * f)}</h3><p>Партнёр изменил стоимость тура «${esc(o.h.name)}» (было ${money(o.current * f)}). Перейти к туру?</p>
+      <div class="row"><button class="btn btn-outline" type="button" data-m="close">Отмена</button><button class="btn btn-cta" type="button" data-m="go">Перейти к туру</button></div>`);
+    $('#modal').onclick = ev => { const b = ev.target.closest('[data-m]'); if (!b) return; closeModal(); if (b.dataset.m === 'go') goOffer(o, np * f); };
+  } else goOffer(o, o.current * f);
+});
+$('#modalBg').addEventListener('click', e => { if (e.target.id === 'modalBg') closeModal(); });
+
+/* ---------- События UI ---------- */
+function bindUI() {
+  // Header
+  const hdr = $('#hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', scrollY > 20);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  $('#burger').addEventListener('click', () => { const o = $('#nav').classList.toggle('open'); $('#burger').setAttribute('aria-expanded', o); $('#burger').setAttribute('aria-label', o ? 'Закрыть меню' : 'Открыть меню'); });
+  $$('#nav a').forEach(a => a.addEventListener('click', () => { $('#nav').classList.remove('open'); $('#burger').setAttribute('aria-expanded', 'false'); }));
+
+  $$('[data-city]').forEach(s => s.addEventListener('change', () => {
+    if (s.id === 'subCity') { s.dataset.touched = '1'; return; }
+    setDeparture(s.value, s.id === 'hdrCity' ? 'header' : s.id === 'fFrom' ? 'filters' : 'search');
+  }));
+  $$('[data-cur]').forEach(s => s.addEventListener('change', () => { state.cur = s.value; store.set('cur', s.value); refresh({ skeleton: false }); track('filter_change', { filter: 'currency' }); }));
+
+  // Hero search
+  $('#heroSearch').addEventListener('submit', e => {
+    e.preventDefault();
+    const from = $('#sFrom').value; if (from !== state.from) { state.from = from; state.cur = ''; store.set('from', from); dTab = DEP_BY[from].cc; }
+    state.to = $('#sTo').value;
+    const d = $('#sDate').value;
+    if (d) { const dd = parseISO(d); state.df = iso(new Date(Math.max(TODAY, addDays(dd, -3)))); state.dt = iso(new Date(Math.min(addDays(TODAY, 60), addDays(dd, 3)))); if (state.dt < state.df) state.dt = state.df; }
+    else { state.df = DEF().df; state.dt = DEF().dt; }
+    [state.nmin, state.nmax] = $('#sNights').value.split('-').map(Number);
+    [state.ad, state.ch] = $('#sPax').value.split('-').map(Number);
+    page = 1; refresh();
+    document.getElementById('offers').scrollIntoView({ behavior: 'smooth' });
+    track('search_submit', { from: state.from, to: state.to || 'any' });
+  });
+
+  // Filters
+  const fchg = (name, fn) => { fn(); track('filter_change', { filter: name }); applyDebounced(); };
+  $('#fTo').addEventListener('change', e => fchg('country', () => state.to = e.target.value));
+  $('#fDf').addEventListener('change', e => fchg('dates', () => { const v = e.target.value; if (v >= MIN_DATE && v <= MAX_DATE) state.df = v; if (state.dt < state.df) state.dt = state.df; }));
+  $('#fDt').addEventListener('change', e => fchg('dates', () => { const v = e.target.value; if (v >= state.df && v <= MAX_DATE) state.dt = v; }));
+  const nights = () => { let a = clamp(parseInt($('#fNmin').value) || 3, 3, 21), b = clamp(parseInt($('#fNmax').value) || 21, 3, 21); if (a > b) [a, b] = [b, a]; state.nmin = a; state.nmax = b; };
+  $('#fNmin').addEventListener('change', () => fchg('nights', nights));
+  $('#fNmax').addEventListener('change', () => fchg('nights', nights));
+  $$('[data-cnt]').forEach(b => b.addEventListener('click', () => fchg('travelers', () => {
+    const k = b.dataset.cnt, d = +b.dataset.d; state[k] = clamp(state[k] + d, k === 'ad' ? 1 : 0, k === 'ad' ? 6 : 4);
+    $('#cAd').textContent = state.ad; $('#cCh').textContent = state.ch;
+  })));
+  $('#fBudget').addEventListener('input', e => { const v = +e.target.value; state.budget = v >= 800000 ? 0 : v; $('#budgetVal').textContent = state.budget ? 'до ' + money(state.budget) : 'любой'; applyDebounced(); });
+  $('#fBudget').addEventListener('change', () => track('filter_change', { filter: 'budget' }));
+  $('#fMeal').addEventListener('change', () => fchg('meal', () => state.meal = $$('#fMeal input:checked').map(i => i.value)));
+  $('#fStars').addEventListener('change', () => fchg('stars', () => state.stars = $$('#fStars input:checked').map(i => +i.value)));
+  $('#fDirect').addEventListener('change', e => fchg('direct', () => state.direct = e.target.checked));
+  $('#fTransfer').addEventListener('change', e => fchg('transfer', () => state.transfer = e.target.checked));
+  $('#sort').addEventListener('change', e => { state.sort = e.target.value; page = 1; track('filter_change', { filter: 'sort' }); refresh(); });
+  const resetAll = () => { const from = state.from, cur = state.cur; state = DEF(); state.from = from; state.cur = cur; page = 1; refresh(); };
+  $('#reset').addEventListener('click', resetAll);
+  $('#more').addEventListener('click', () => { page++; renderOffers(); track('load_more', { page }); });
+  $('#grid').addEventListener('click', e => {
+    const b = e.target.closest('[data-act]'); if (!b) return;
+    const act = b.dataset.act;
+    if (act === 'reset') resetAll();
+    if (act === 'retry') refresh();
+    if (act === 'anyc') { state.to = ''; page = 1; refresh(); }
+    if (act === 'widen') { state.df = iso(new Date(Math.max(TODAY, addDays(parseISO(state.df), -3)))); state.dt = iso(new Date(Math.min(addDays(TODAY, 60), addDays(parseISO(state.dt), 3)))); state.nmin = Math.max(3, state.nmin - 2); state.nmax = Math.min(21, state.nmax + 2); page = 1; refresh(); }
+  });
+
+  // Bottom sheet
+  const sheet = $('#filters'), ov = $('#sheetOverlay');
+  const openSheet = () => { sheet.classList.add('open'); ov.hidden = false; document.body.style.overflow = 'hidden'; $('#closeFilters').focus(); };
+  const closeSheet = () => { sheet.classList.remove('open'); ov.hidden = true; document.body.style.overflow = ''; };
+  $('#openFilters').addEventListener('click', openSheet);
+  $('#closeFilters').addEventListener('click', closeSheet);
+  $('#applySheet').addEventListener('click', closeSheet);
+  ov.addEventListener('click', closeSheet);
+  addEventListener('keydown', e => { if (e.key === 'Escape') { closeSheet(); closeModal(); } });
+
+  // Countries
+  $('#cTabs').addEventListener('click', e => { const t = e.target.closest('[data-cat]'); if (!t) return; cTab = t.dataset.cat; openC = null; renderCountries(); });
+  $('#cGrid').addEventListener('click', e => {
+    const all = e.target.closest('[data-all]');
+    if (all) { selectCountry(all.dataset.all, 'card'); return; }
+    const c = e.target.closest('.c-card'); if (!c) return;
+    openC = openC === c.dataset.country ? null : c.dataset.country;
+    renderCountries();
+    if (openC) { track('country_card_click', { country: openC }); $('#cPanel')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+  });
+
+  // Departures
+  $('#dTabs').addEventListener('click', e => { const t = e.target.closest('[data-dtab]'); if (!t) return; dTab = t.dataset.dtab; renderDepartures(); });
+  $('#dChips').addEventListener('click', e => { const c = e.target.closest('[data-dep]'); if (c) { setDeparture(c.dataset.dep, 'departures'); toast(`✈️ Город вылета: <b>${DEP_BY[c.dataset.dep].name}</b>`, 2500); } });
+
+  // Formula
+  $('#fbar').addEventListener('click', e => {
+    const b = e.target.closest('[data-k]'); if (!b) return;
+    $$('#fbar button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    $('#fdesc').innerHTML = FDESC[b.dataset.k];
+  });
+
+  // FAQ
+  $('#faqList').addEventListener('click', e => {
+    const q = e.target.closest('.faq-q'); if (!q) return;
+    const open = q.getAttribute('aria-expanded') === 'true';
+    q.setAttribute('aria-expanded', !open); $('#' + q.getAttribute('aria-controls')).hidden = open;
+  });
+
+  // Subscribe
+  $('#subForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const email = $('#subEmail').value.trim(), ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email), cons = $('#subConsent').checked;
+    $('#errEmail').hidden = ok; $('#errConsent').hidden = cons;
+    if (!ok) { $('#subEmail').focus(); return; }
+    if (!cons) return;
+    const payload = { email, from: $('#subCity').value, countries: $$('#subCountries input:checked').map(i => i.value), budget: $('#subBudget').value || null };
+    // В рабочей версии: await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+    console.debug('[demo] POST /api/subscribe', payload);
+    $('#subForm').innerHTML = `<div class="sub-ok" role="status"><div class="ill">📬</div><h3>Почти готово!</h3><p>Мы отправили письмо на <b>${esc(email)}</b>. Подтвердите подписку по ссылке из письма (double opt-in).</p><p style="font-size:12.5px">Демо: письмо не отправляется — нужен серверный <code>POST /api/subscribe</code>.</p></div>`;
+    track('subscribe_success', { from: payload.from });
+  });
+  $('#tgBtn').addEventListener('click', () => toast('📣 Ссылка на Telegram-канал появится после запуска проекта'));
+
+  // Cookies
+  const ck = $('#cookie');
+  const ckShow = v => { ck.hidden = !v; document.body.classList.toggle('has-cookie', v); };
+  if (!store.get('cookies')) ckShow(true);
+  $('#cookieYes').addEventListener('click', () => { store.set('cookies', 'all'); ckShow(false); });
+  $('#cookieNo').addEventListener('click', () => { store.set('cookies', 'necessary'); ckShow(false); });
+  $('#cookieSettings').addEventListener('click', e => { e.preventDefault(); ckShow(true); });
+  $('#year').textContent = TODAY.getFullYear();
+}
+
+/* ---------- Автоопределение города ---------- */
+function guessCity() {
+  const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+  const map = { 'Asia/Almaty': 'ALA', 'Asia/Qostanay': 'NQZ', 'Asia/Aqtau': 'SCO', 'Asia/Aqtobe': 'SCO', 'Asia/Tashkent': 'TAS', 'Asia/Samarkand': 'SKD', 'Europe/Minsk': 'MSQ', 'Asia/Yerevan': 'EVN', 'Asia/Bishkek': 'FRU', 'Asia/Novosibirsk': 'OVB', 'Asia/Yekaterinburg': 'SVX', 'Asia/Krasnoyarsk': 'KJA', 'Asia/Vladivostok': 'VVO', 'Europe/Samara': 'KUF', 'Europe/Kaliningrad': 'LED' };
+  return map[tz] || 'MOW';
+}
+function askCity() {
+  const code = guessCity(), d = DEP_BY[code];
+  if (code !== state.from) setDeparture(code, 'geo');
+  toast(`<p>📍 Ваш город — <b>${d.name}</b>?</p><button class="btn btn-cta" type="button" id="geoYes">Да</button><button class="btn btn-outline" type="button" id="geoNo">Выбрать другой</button>`, 0);
+  $('#geoYes').onclick = () => { store.set('from', code); toastEl.classList.remove('show'); };
+  $('#geoNo').onclick = () => { toastEl.classList.remove('show'); document.getElementById('departures').scrollIntoView({ behavior: 'smooth' }); };
+}
+
+/* ---------- Появление секций ---------- */
+function initReveal() {
+  if (!('IntersectionObserver' in window)) { $$('.reveal').forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+}
+
+/* ---------- Связь с глобусом ---------- */
+let globeAPI = null, lastRoute = '';
+function topCountries() {
+  const st = countryStats(state.from);
+  return Object.entries(st).sort((a, b) => b[1].best - a[1].best).slice(0, 5).map(([k]) => C_BY[k]);
+}
+function updateGlobe() {
+  if (!globeAPI) return;
+  globeAPI.setActive(state.to);
+  if (lastRoute !== state.from) { lastRoute = state.from; globeAPI.setRoute(DEP_BY[state.from], topCountries()); }
+}
+const globeBridge = {
+  countries: COUNTRIES,
+  tip(code) { const s = countryStats(state.from)[code], c = C_BY[code]; return `${c.flag} ${c.name}${s ? ' · от ' + money(s.min * travF()) : ''}`; },
+  click(code) { selectCountry(code, 'globe'); },
+  ready(api) { globeAPI = api; lastRoute = ''; updateGlobe(); }
+};
+$('#globeList').innerHTML = COUNTRIES.map(c => `<li><button type="button" data-gc="${c.code}">${c.name}</button></li>`).join('');
+$('#globeList').addEventListener('click', e => { const b = e.target.closest('[data-gc]'); if (b) selectCountry(b.dataset.gc, 'globe'); });
+
+/* ---------- Старт ---------- */
+fillSelects(); renderFAQ(); bindUI();
+const fromURL = readURL();
+if (!fromURL) { const f = store.get('from'); if (DEP_BY[f]) state.from = f; const c = store.get('cur'); if (CURR[c]) state.cur = c; }
+dTab = DEP_BY[state.from].cc;
+refresh();
+initReveal();
+if (!fromURL && !store.get('from')) setTimeout(askCity, 1200);
+const startGlobe = () => initGlobe(globeBridge).catch(err => console.warn('Globe disabled:', err));
+if (document.readyState === 'complete') setTimeout(startGlobe, 50); else addEventListener('load', () => setTimeout(startGlobe, 50));
+
+/* =========================================================
+   3D-глобус (js/globe/*): Three.js, ленивая загрузка
+   ========================================================= */
+async function initGlobe(bridge) {
+  const wrap = $('#globeWrap'), host = $('#globe'), tip = $('#globeTip');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try { const cv = document.createElement('canvas'); if (!(cv.getContext('webgl2') || cv.getContext('webgl'))) return; } catch (e) { return; }
+  const THREE = await import('three');
+  const R = 2.6, DEG = Math.PI / 180, Z = new THREE.Vector3(0, 0, 1);
+  const v3 = (lat, lon, r = R) => { const phi = (90 - lat) * DEG, th = (lon + 180) * DEG; return new THREE.Vector3(-r * Math.sin(phi) * Math.cos(th), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(th)); };
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  host.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, .1, 100);
+  scene.add(new THREE.AmbientLight(0xffffff, 1.9));
+  const sun = new THREE.DirectionalLight(0xfff4e0, 2.3); sun.position.set(-6, 5, 8); scene.add(sun);
+
+  const tilt = new THREE.Group(); tilt.rotation.x = .5; scene.add(tilt);
+  const spin = new THREE.Group(); spin.rotation.y = -(45 + 90) * DEG; tilt.add(spin);
+
+  // Земля
+  const mat = new THREE.MeshPhongMaterial({ color: 0x3aa0e0, shininess: 16, specular: new THREE.Color(0x2a4a66) });
+  const loader = new THREE.TextureLoader(); loader.setCrossOrigin('anonymous');
+  const applyMap = t => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = renderer.capabilities.getMaxAnisotropy(); mat.map = t; mat.color.set(0xffffff); mat.needsUpdate = true; };
+  const TEX = ['https://unpkg.com/three-globe@2.31.0/example/img/earth-blue-marble.jpg', 'https://cdn.jsdelivr.net/npm/three-globe@2.31.0/example/img/earth-blue-marble.jpg'];
+  const tryTex = i => loader.load(TEX[i], applyMap, undefined, () => i + 1 < TEX.length ? tryTex(i + 1) : applyMap(proceduralEarth()));
+  tryTex(0);
+  loader.load('https://unpkg.com/three-globe@2.31.0/example/img/earth-topology.png', t => { mat.bumpMap = t; mat.bumpScale = 1.2; mat.needsUpdate = true; }, undefined, () => {});
+  function proceduralEarth() {
+    const c = document.createElement('canvas'); c.width = 1024; c.height = 512; const g = c.getContext('2d');
+    const grd = g.createLinearGradient(0, 0, 0, 512); grd.addColorStop(0, '#1d6fa5'); grd.addColorStop(.5, '#1e88c7'); grd.addColorStop(1, '#1d6fa5');
+    g.fillStyle = grd; g.fillRect(0, 0, 1024, 512);
+    const r = rng(42); g.fillStyle = '#5c9a4a';
+    COUNTRIES.concat(DEPS).forEach(p => { const x = (p.lon + 180) / 360 * 1024, y = (90 - p.lat) / 180 * 512; for (let i = 0; i < 6; i++) { g.beginPath(); g.ellipse(x + (r() - .5) * 60, y + (r() - .5) * 40, 20 + r() * 40, 12 + r() * 26, r() * 3, 0, 7); g.fill(); } });
+    return new THREE.CanvasTexture(c);
+  }
+  const earth = new THREE.Mesh(new THREE.SphereGeometry(R, 64, 64), mat); spin.add(earth);
+
+  // Атмосфера
+  const atm = new THREE.Mesh(new THREE.SphereGeometry(R * 1.14, 64, 64), new THREE.ShaderMaterial({
+    vertexShader: 'varying vec3 vN; void main(){ vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
+    fragmentShader: 'varying vec3 vN; void main(){ float i = pow(max(0.0, 0.7 - dot(vN, vec3(0.0,0.0,1.0))), 2.4); gl_FragColor = vec4(0.62, 0.88, 1.0, 1.0) * min(i, 1.2); }',
+    side: THREE.BackSide, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false
+  }));
+  scene.add(atm);
+
+  // Маркеры стран
+  const markers = [], hits = [];
+  const dotGeo = new THREE.SphereGeometry(.05, 16, 16), ringGeo = new THREE.RingGeometry(.06, .085, 40), hitGeo = new THREE.SphereGeometry(.17, 8, 8);
+  const CORAL = new THREE.Color(0xff6b4a), SUN = new THREE.Color(0xffc93c);
+  bridge.countries.forEach((c, i) => {
+    const g = new THREE.Group(), p = v3(c.lat, c.lon, R * 1.004);
+    g.position.copy(p); g.quaternion.setFromUnitVectors(Z, p.clone().normalize());
+    const dot = new THREE.Mesh(dotGeo, new THREE.MeshBasicMaterial({ color: CORAL }));
+    const ring = new THREE.Mesh(ringGeo, new THREE.MeshBasicMaterial({ color: CORAL, transparent: true, side: THREE.DoubleSide, depthWrite: false }));
+    const hit = new THREE.Mesh(hitGeo, new THREE.MeshBasicMaterial({ visible: false })); hit.userData.code = c.code;
+    g.add(dot, ring, hit); spin.add(g);
+    markers.push({ code: c.code, dot, ring, phase: i * .37 }); hits.push(hit);
+  });
+  // Маркер города вылета
+  const depMark = new THREE.Group(); depMark.visible = false;
+  const depDot = new THREE.Mesh(new THREE.SphereGeometry(.06, 16, 16), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+  const depRing = new THREE.Mesh(new THREE.RingGeometry(.075, .1, 40), new THREE.MeshBasicMaterial({ color: 0xffc93c, transparent: true, side: THREE.DoubleSide, depthWrite: false }));
+  depMark.add(depDot, depRing); spin.add(depMark);
+
+  // Дуги маршрутов
+  const arcGroup = new THREE.Group(); spin.add(arcGroup);
+  let arcs = [];
+  const arcColors = [0xffc93c, 0xff8a5c, 0xffffff, 0xffd166, 0xff6b4a];
+
+  // Самолёт
+  function buildPlane() {
+    const g = new THREE.Group();
+    const white = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .4, metalness: .15 });
+    const coral = new THREE.MeshStandardMaterial({ color: 0xff6b4a, roughness: .5 });
+    const deep = new THREE.MeshStandardMaterial({ color: 0x0b3c5d, roughness: .3 });
+    const body = new THREE.Mesh(new THREE.CapsuleGeometry(.045, .32, 6, 14), white); body.rotation.x = Math.PI / 2; g.add(body);
+    const wing = new THREE.Mesh(new THREE.BoxGeometry(.52, .012, .1), white); wing.position.set(0, -.012, .02); g.add(wing);
+    const tail = new THREE.Mesh(new THREE.BoxGeometry(.18, .01, .06), white); tail.position.set(0, .01, -.17); g.add(tail);
+    const fin = new THREE.Mesh(new THREE.BoxGeometry(.012, .1, .08), coral); fin.position.set(0, .06, -.17); g.add(fin);
+    const cockpit = new THREE.Mesh(new THREE.SphereGeometry(.03, 12, 12), deep); cockpit.scale.set(1, .6, 1.3); cockpit.position.set(0, .028, .15); g.add(cockpit);
+    [-.13, .13].forEach(x => { const e = new THREE.Mesh(new THREE.CylinderGeometry(.02, .02, .07, 12), coral); e.rotation.x = Math.PI / 2; e.position.set(x, -.035, .05); g.add(e); });
+    g.scale.setScalar(1.3);
+    return g;
+  }
+  const pivot = new THREE.Group(); pivot.rotation.set(.38, 0, -.3); scene.add(pivot);
+  const plane = buildPlane(); pivot.add(plane);
+  const RO = R * 1.3, TN = 64;
+  const tPos = new Float32Array(TN * 2 * 3), tCol = new Float32Array(TN * 2 * 4), tIdx = [];
+  for (let i = 0; i < TN; i++) {
+    const a = Math.pow(i / (TN - 1), 1.8) * .8;
+    for (let k = 0; k < 2; k++) tCol.set([1, 1, 1, a], (i * 2 + k) * 4);
+    if (i < TN - 1) { const b = i * 2; tIdx.push(b, b + 1, b + 2, b + 1, b + 3, b + 2); }
+  }
+  const tGeo = new THREE.BufferGeometry();
+  tGeo.setAttribute('position', new THREE.BufferAttribute(tPos, 3));
+  tGeo.setAttribute('color', new THREE.BufferAttribute(tCol, 4));
+  tGeo.setIndex(tIdx);
+  const trail = new THREE.Mesh(tGeo, new THREE.MeshBasicMaterial({ vertexColors: true, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
+  trail.frustumCulled = false; pivot.add(trail);
+  let pt = 0;
+  const _p = new THREE.Vector3(), _n = new THREE.Vector3();
+  function updatePlane(dt) {
+    pt += dt * .32;
+    for (let i = 0; i < TN; i++) {
+      const a = pt - 1.15 + 1.1 * (i / (TN - 1)), x = Math.cos(a) * RO, z = Math.sin(a) * RO, w = .003 + .028 * (i / (TN - 1));
+      tPos.set([x, w, z], i * 6); tPos.set([x, -w, z], i * 6 + 3);
+    }
+    tGeo.attributes.position.needsUpdate = true;
+    pivot.updateMatrixWorld();
+    _p.set(Math.cos(pt) * RO, 0, Math.sin(pt) * RO); plane.position.copy(_p);
+    plane.up.copy(pivot.localToWorld(_p.clone()).normalize());
+    _n.set(Math.cos(pt + .02) * RO, 0, Math.sin(pt + .02) * RO);
+    plane.lookAt(pivot.localToWorld(_n));
+  }
+
+  // Размер и камера
+  function resize() {
+    const w = host.clientWidth, h = host.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    camera.position.z = (R * 1.45) / Math.tan(camera.fov * DEG / 2) / Math.min(1, camera.aspect);
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(host); resize();
+
+  // Взаимодействие
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(), el = renderer.domElement;
+  function pick(ev) {
+    const r = el.getBoundingClientRect();
+    ndc.set(((ev.clientX - r.left) / r.width) * 2 - 1, -((ev.clientY - r.top) / r.height) * 2 + 1);
+    ray.setFromCamera(ndc, camera);
+    const hs = ray.intersectObjects([earth, ...hits], false);
+    const m = hs.find(x => x.object !== earth); if (!m) return null;
+    const e = hs.find(x => x.object === earth);
+    if (e && e.distance < m.distance - .05) return null;
+    return m.object.userData.code;
+  }
+  let drag = null, focus = null, idle = 0, hoverCode = null;
+  el.addEventListener('pointerdown', e => { drag = { x: e.clientX, y: e.clientY, moved: 0 }; el.setPointerCapture(e.pointerId); focus = null; });
+  el.addEventListener('pointermove', e => {
+    if (drag) {
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y; drag.moved += Math.abs(dx) + Math.abs(dy); drag.x = e.clientX; drag.y = e.clientY;
+      spin.rotation.y += dx * .006; tilt.rotation.x = clamp(tilt.rotation.x + dy * .004, -.3, 1.05); idle = 2.5; tip.hidden = true; return;
+    }
+    const code = pick(e); hoverCode = code;
+    el.style.cursor = code ? 'pointer' : 'grab';
+    if (code) { const r = wrap.getBoundingClientRect(); tip.textContent = bridge.tip(code); tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.hidden = false; }
+    else tip.hidden = true;
+  });
+  el.addEventListener('pointerup', e => { if (drag && drag.moved < 6) { const code = pick(e); if (code) bridge.click(code); } drag = null; });
+  el.addEventListener('pointercancel', () => { drag = null; });
+  el.addEventListener('pointerleave', () => { tip.hidden = true; hoverCode = null; });
+
+  // API для приложения
+  let activeCode = '';
+  const api = {
+    setActive(code) { activeCode = code || ''; markers.forEach(m => { const c = m.code === activeCode ? SUN : CORAL; m.dot.material.color.copy(c); m.ring.material.color.copy(c); }); },
+    setRoute(dep, tops) {
+      arcs.forEach(a => { arcGroup.remove(a.mesh); a.mesh.geometry.dispose(); a.mesh.material.dispose(); }); arcs = [];
+      const s = v3(dep.lat, dep.lon);
+      depMark.position.copy(v3(dep.lat, dep.lon, R * 1.005)); depMark.quaternion.setFromUnitVectors(Z, s.clone().normalize()); depMark.visible = true;
+      tops.forEach((c, i) => {
+        const e = v3(c.lat, c.lon), d = s.distanceTo(e); if (d < .05) return;
+        const m = s.clone().add(e).multiplyScalar(.5); if (m.length() < .01) return;
+        m.normalize().multiplyScalar(R + d * .42 + .1);
+        const geo = new THREE.TubeGeometry(new THREE.QuadraticBezierCurve3(s, m, e), 90, .013, 6, false);
+        geo.setDrawRange(0, 0);
+        const mesh = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: arcColors[i % arcColors.length], transparent: true, opacity: .95 }));
+        arcGroup.add(mesh); arcs.push({ mesh, total: geo.index.count, t: -i * .22 });
+      });
+      // Повернуть глобус к городу вылета
+      let ty = -(dep.lon + 90) * DEG; const cy = spin.rotation.y;
+      while (ty - cy > Math.PI) ty -= 2 * Math.PI; while (ty - cy < -Math.PI) ty += 2 * Math.PI;
+      focus = { y0: cy, y1: ty - .35, x0: tilt.rotation.x, x1: clamp(dep.lat * DEG * .8, 0, .9), k: 0 };
+    }
+  };
+
+  // Цикл рендера (пауза вне экрана и на неактивной вкладке)
+  const clock = new THREE.Clock(); let running = false, inView = true, first = true;
+  function frame() {
+    if (!running) return;
+    requestAnimationFrame(frame);
+    const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime;
+    if (focus) {
+      focus.k = Math.min(1, focus.k + dt / 1.6); const k = 1 - Math.pow(1 - focus.k, 3);
+      spin.rotation.y = focus.y0 + (focus.y1 - focus.y0) * k; tilt.rotation.x = focus.x0 + (focus.x1 - focus.x0) * k;
+      if (focus.k >= 1) { focus = null; idle = 2; }
+    } else if (!drag) {
+      if (idle > 0) idle -= dt; else spin.rotation.y += .05 * dt * (hoverCode ? .2 : 1);
+    }
+    markers.forEach(m => { const f = (t * .7 + m.phase) % 1; m.ring.scale.setScalar(1 + f * 1.8); m.ring.material.opacity = (1 - f) * .9; });
+    const df = (t * .6) % 1; depRing.scale.setScalar(1 + df * 2.2); depRing.material.opacity = 1 - df;
+    arcs.forEach(a => { if (a.t < 1) { a.t += dt * .7; const p = clamp(a.t, 0, 1); a.mesh.geometry.setDrawRange(0, Math.floor(p * a.total / 3) * 3); } });
+    updatePlane(dt);
+    renderer.render(scene, camera);
+    if (first) { first = false; wrap.classList.add('ready'); }
+  }
+  const setRun = v => { if (v && !running) { running = true; clock.getDelta(); frame(); } else if (!v) running = false; };
+  new IntersectionObserver(es => { inView = es[0].isIntersecting; setRun(inView && !document.hidden); }).observe(wrap);
+  document.addEventListener('visibilitychange', () => setRun(inView && !document.hidden));
+  setRun(true);
+  bridge.ready(api);
+}
+</script>
+</body>
+</html>
